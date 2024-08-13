@@ -1,0 +1,15 @@
+C:\Users\melin\Dev\csharp\c-sharp-player\Console\bin\Debug\net8.0\Console.exe
+C:\Users\melin\Dev\csharp\c-sharp-player\Console\bin\Debug\net8.0\Console.deps.json
+C:\Users\melin\Dev\csharp\c-sharp-player\Console\bin\Debug\net8.0\Console.runtimeconfig.json
+C:\Users\melin\Dev\csharp\c-sharp-player\Console\bin\Debug\net8.0\Console.dll
+C:\Users\melin\Dev\csharp\c-sharp-player\Console\bin\Debug\net8.0\Console.pdb
+C:\Users\melin\Dev\csharp\c-sharp-player\Console\obj\Debug\net8.0\Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\melin\Dev\csharp\c-sharp-player\Console\obj\Debug\net8.0\Console.AssemblyInfoInputs.cache
+C:\Users\melin\Dev\csharp\c-sharp-player\Console\obj\Debug\net8.0\Console.AssemblyInfo.cs
+C:\Users\melin\Dev\csharp\c-sharp-player\Console\obj\Debug\net8.0\Console.csproj.CoreCompileInputs.cache
+C:\Users\melin\Dev\csharp\c-sharp-player\Console\obj\Debug\net8.0\Console.sourcelink.json
+C:\Users\melin\Dev\csharp\c-sharp-player\Console\obj\Debug\net8.0\Console.dll
+C:\Users\melin\Dev\csharp\c-sharp-player\Console\obj\Debug\net8.0\refint\Console.dll
+C:\Users\melin\Dev\csharp\c-sharp-player\Console\obj\Debug\net8.0\Console.pdb
+C:\Users\melin\Dev\csharp\c-sharp-player\Console\obj\Debug\net8.0\Console.genruntimeconfig.cache
+C:\Users\melin\Dev\csharp\c-sharp-player\Console\obj\Debug\net8.0\ref\Console.dll

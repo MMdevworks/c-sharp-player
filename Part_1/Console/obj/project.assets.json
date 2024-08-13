@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\melin\\Dev\\csharp\\c-sharp-player\\Basics\\Basics.csproj",
-      "projectName": "Basics",
-      "projectPath": "C:\\Users\\melin\\Dev\\csharp\\c-sharp-player\\Basics\\Basics.csproj",
+      "projectUniqueName": "C:\\Users\\melin\\Dev\\csharp\\c-sharp-player\\Console\\Console.csproj",
+      "projectName": "Console",
+      "projectPath": "C:\\Users\\melin\\Dev\\csharp\\c-sharp-player\\Console\\Console.csproj",
       "packagesPath": "C:\\Users\\melin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\melin\\Dev\\csharp\\c-sharp-player\\Basics\\obj\\",
+      "outputPath": "C:\\Users\\melin\\Dev\\csharp\\c-sharp-player\\Console\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\melin\\AppData\\Roaming\\NuGet\\NuGet.Config"
