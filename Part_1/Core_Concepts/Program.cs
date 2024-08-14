@@ -192,3 +192,29 @@
 
 // Console.WriteLine(user_input);
 // break;
+
+// ---- CHALLENGE ---- The Prototype (loops)
+
+// int target_number;
+// int guess_number;
+// bool looping = true;
+
+// Console.Write("Hider, enter a number between 0 and 100: ");
+// target_number = Convert.ToInt32(Console.ReadLine());
+// while (looping) {
+//     Thread.Sleep(1000);
+//     Console.Write("Seeker, guess the number. ");
+//     guess_number = Convert.ToInt32(Console.ReadLine());
+//     if (guess_number > target_number) {
+//         Console.WriteLine($"{guess_number} is too high. Guess again."); 
+//         continue;
+//     } else if (guess_number < target_number){
+//         Console.WriteLine($"{guess_number} is too low. Guess again");
+//         continue;
+//     } else {
+//         Console.WriteLine($"You got it! The number was {target_number}.");
+//         break;
+//     }
+// }
+
+
