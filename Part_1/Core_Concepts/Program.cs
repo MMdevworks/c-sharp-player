@@ -217,4 +217,80 @@
 //     }
 // }
 
+// ---- CHALLENGE ---- Cannon(loops) 
 
+// for (int turn = 1; turn <= 100; turn++){
+//     if (turn % 3 == 0 && turn % 5 == 0){
+//         Console.ForegroundColor = ConsoleColor.Cyan;
+//         Console.WriteLine($"{turn}: Electric Fire!");
+//     }else if (turn % 3 == 0) {
+//         Console.ForegroundColor = ConsoleColor.Red;
+//         Console.WriteLine($"{turn}: Fire!");
+//     }else if (turn % 5 == 0) {
+//         Console.ForegroundColor = ConsoleColor.Yellow;
+//         Console.WriteLine($"{turn}: Electric!");
+//     } else {
+//         Console.ForegroundColor = ConsoleColor.White;
+//         Console.WriteLine($"{turn}: Normal");
+//     }
+// }
+
+// ---- CHALLENGE ---- 
+
+// -- ARRAYS
+// int[] array = new int[10];
+// for(int index = 0; index < array.Length; index++) array[index] = 1;
+// foreach (int i in array){
+//     Console.WriteLine(i);
+// }
+
+// int[] scores = new [] { 100, 95, 92, 87, 55, 50, 48, 40, 35, 10 };
+// Console.WriteLine(scores[^1]);
+
+// foreach (int i in scores){Console.WriteLine(scores[0..3]);
+
+// ---- ---- REPLICATOR (Arrays)
+
+// int[] firstArray = new int[5];
+// int[] secondArray = new int[5];
+
+// for(int i = 0; i < firstArray.Length; i++){
+//     Console.WriteLine($"Enter a number for spot {i}");
+//     int num = Convert.ToInt32(Console.ReadLine());
+//     firstArray[i] = num;
+//     secondArray[i] = firstArray[i];
+// }
+    
+// Write out all items in firstArray and secondArray
+// for(int index = 0; index < firstArray.Length; index++)
+// {
+//     int val = firstArray[index];
+//     int val2 = secondArray[index];
+//     Console.WriteLine($"First array {val}");
+//     Console.WriteLine($"Second array {val}");
+// }
+
+// returns the index value: 
+// ($"Enter a number for spot {first_array[i]}");
+// returns the index
+// ($"Enter a number for spot {i}");
+
+
+// ---- CHALLENGE ---- For Each
+// int[] array = new int[] { 4, 51, -7, 13, -99, 15, -8, 45, 90 };
+// int currentSmallest = int.MaxValue;
+// foreach(int num in array){
+//     if (num < currentSmallest){
+//         currentSmallest = num;
+//     }
+// }
+
+// Console.WriteLine(currentSmallest);
+
+
+// int[] array = new int[] { 4, 51, -7, 13, -99, 15, -8, 45, 90 };
+// int total = 0;
+// foreach (int val in array)
+//     total += val;
+// float average = (float)total / array.Length;
+// Console.WriteLine(average);
