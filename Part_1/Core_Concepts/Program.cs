@@ -251,15 +251,7 @@
 
 // ---- ---- REPLICATOR (Arrays)
 
-// int[] firstArray = new int[5];
-// int[] secondArray = new int[5];
-
-// for(int i = 0; i < firstArray.Length; i++){
-//     Console.WriteLine($"Enter a number for spot {i}");
-//     int num = Convert.ToInt32(Console.ReadLine());
-//     firstArray[i] = num;
-//     secondArray[i] = firstArray[i];
-// }
+// gi
     
 // Write out all items in firstArray and secondArray
 // for(int index = 0; index < firstArray.Length; index++)
@@ -294,3 +286,51 @@
 //     total += val;
 // float average = (float)total / array.Length;
 // Console.WriteLine(average);
+
+// ---- CHALLENGE ---- Take a Number (Method)
+
+// ----- Method 1
+// int result = AskForNumber("Give me a number and I'll give it back... ");
+// Console.Write(result);
+
+// int AskForNumber(string text)
+// {
+//     Console.Write(text);
+//     int num = Convert.ToInt32(Console.ReadLine());
+//     return num;
+// }
+
+// ----- Method 2
+
+// AskForNumberInRange("Give me a number within the magic range... ", 35, 45);
+
+// int AskForNumberInRange(string text, int min, int max)
+// {   
+//     while (true)
+//     {
+//         Console.Write(text);
+//         int guess = Convert.ToInt32(Console.ReadLine());
+//         if (guess >= 35 && guess <= 45){
+//             Console.WriteLine("Wow, like a magic.");
+//             return guess;
+//         }
+//         Console.WriteLine("No magic. Guess again.");
+//     }
+// }
+
+// ---- CHALLENGE ---- Countdown (Recursion)
+
+FinalCoundown(11);
+
+
+int FinalCoundown(int num)
+{
+    while(true){
+        if (num > 1){
+            num--;
+            Console.WriteLine($"{num}");
+            FinalCoundown(num);
+        }
+        return num;
+    }
+}
