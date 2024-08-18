@@ -320,17 +320,131 @@
 
 // ---- CHALLENGE ---- Countdown (Recursion)
 
-FinalCoundown(11);
+// FinalCoundown(11);
 
+// int FinalCoundown(int num)
+// {
+//     while(true){
+//         if (num > 1){
+//             num--;
+//             Console.WriteLine($"{num}");
+//             FinalCoundown(num);
+//         }
+//         return num;
+//     }
+// }
 
-int FinalCoundown(int num)
+// ---- CHALLENGE ---- Manticore
+
+int mantiHealthStatic = 10;
+int mantiHealthCurrent = 10;
+int cityHealthStatic = 15;
+int cityHealthCurrent = 15;
+int round = 0;
+int roundDamage = 1;
+int manticoreStation;
+int damage = 1;
+bool endGame = false;
+
+StationManticore();
+
+void StationManticore()
 {
-    while(true){
-        if (num > 1){
-            num--;
-            Console.WriteLine($"{num}");
-            FinalCoundown(num);
-        }
-        return num;
+    Console.Write("Player 1, how far away from the city do you want to station the Manticore? (Range 0 - 100) ");
+    manticoreStation = Convert.ToInt32(Console.ReadLine());
+    if (manticoreStation < 0 || manticoreStation > 100)
+    {
+        Console.WriteLine("Out of range! Pick a number within limits.");
+        StationManticore();
+    }
+    Console.WriteLine("Manticore has been stationed. Clearing the plan. One moment...");
+    Thread.Sleep(1000);
+    Console.Clear();
+    DisplayStatus();
+}
+
+void DisplayStatus() 
+{
+    // check end game condition
+    if (mantiHealthCurrent <= 0) {
+        endGame = true;
+        Console.WriteLine("You destroyed the Manticore and saved the city!");
+    } else if (cityHealthCurrent <= 0) {
+        endGame = true;
+        Console.WriteLine("The Manticore destroyed the city!");
+    }
+
+    while(endGame != true)
+    {
+        round++;
+        CalcRoundDamage(round);
+        Console.WriteLine("Here is the current report: ");
+        Thread.Sleep(1000);
+        Console.WriteLine("----------------------------------------------------------");
+        Console.WriteLine($"STATUS: Round: {round} | City: {cityHealthCurrent}/{cityHealthStatic} | Manticore: {mantiHealthCurrent}/{mantiHealthStatic}");
+        Console.WriteLine($"The cannon is expected to deal {roundDamage} damage this round.");
+        Console.Write("Enter desired cannon range: ");
+        int cannonRange = Convert.ToInt32(Console.ReadLine());
+        CannonRange(cannonRange);
+    }
+}
+
+// check if within hit range
+void CannonRange(int range)
+{
+    if (range < manticoreStation) {
+        Console.WriteLine("That round FELL SHORT of the target.");
+        cityHealthCurrent--;
+        CannonDamagePerRoundMiss(round);
+        DisplayStatus();
+    } else if (range > manticoreStation) {
+        Console.WriteLine("That round OVERSHOT the target.");
+        cityHealthCurrent--;
+        CannonDamagePerRoundMiss(round);
+        DisplayStatus();
+    } else {
+        Console.WriteLine("That round was a DIRECT HIT!");
+        cityHealthCurrent--;
+        CannonDamagePerRound(round);
+    }
+}
+
+// if its a hit call this to determine damage by round
+void CannonDamagePerRound(int currentRound)
+{
+    if (currentRound % 3 == 0 && currentRound % 5 == 0){
+        damage = 5;
+        mantiHealthCurrent -= damage;
+    }else if (currentRound % 3 == 0 || currentRound % 5 == 0) {
+        damage = 3;
+        mantiHealthCurrent -= damage;
+    } else {
+        damage = 1;
+        mantiHealthCurrent -= damage;
+    }
+    DisplayStatus();
+}
+
+void CannonDamagePerRoundMiss(int currentRound)
+{
+    if (currentRound % 3 == 0 && currentRound % 5 == 0){
+        damage = 5;
+    }else if (currentRound % 3 == 0 || currentRound % 5 == 0) {
+        damage = 3;
+    } else {
+        damage = 1;
+    }
+    DisplayStatus();
+}
+
+//for displaying damage that will occur if there is a hit on current round
+void CalcRoundDamage(int currentRound)
+{
+    if (currentRound % 3 == 0 && currentRound % 5 == 0){
+        roundDamage = 5;
+    }else if (currentRound % 3 == 0 || currentRound % 5 == 0) {
+        roundDamage = 3;
+    } else {
+        roundDamage = 1;
     }
 }
