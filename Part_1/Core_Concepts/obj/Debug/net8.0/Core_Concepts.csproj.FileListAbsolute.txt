@@ -1,0 +1,15 @@
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/bin/Debug/net8.0/Core_Concepts
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/bin/Debug/net8.0/Core_Concepts.deps.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/bin/Debug/net8.0/Core_Concepts.runtimeconfig.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/bin/Debug/net8.0/Core_Concepts.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/bin/Debug/net8.0/Core_Concepts.pdb
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/obj/Debug/net8.0/Core_Concepts.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/obj/Debug/net8.0/Core_Concepts.AssemblyInfoInputs.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/obj/Debug/net8.0/Core_Concepts.AssemblyInfo.cs
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/obj/Debug/net8.0/Core_Concepts.csproj.CoreCompileInputs.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/obj/Debug/net8.0/Core_Concepts.sourcelink.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/obj/Debug/net8.0/Core_Concepts.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/obj/Debug/net8.0/refint/Core_Concepts.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/obj/Debug/net8.0/Core_Concepts.pdb
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/obj/Debug/net8.0/Core_Concepts.genruntimeconfig.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/obj/Debug/net8.0/ref/Core_Concepts.dll
