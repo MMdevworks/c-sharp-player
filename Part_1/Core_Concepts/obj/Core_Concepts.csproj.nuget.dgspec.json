@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/Core_Concepts.csproj": {}
+    "C:\\Users\\melin\\Dev\\csharp\\c-sharp-player\\Part_1\\Core_Concepts\\Core_Concepts.csproj": {}
   },
   "projects": {
-    "/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/Core_Concepts.csproj": {
+    "C:\\Users\\melin\\Dev\\csharp\\c-sharp-player\\Part_1\\Core_Concepts\\Core_Concepts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/Core_Concepts.csproj",
+        "projectUniqueName": "C:\\Users\\melin\\Dev\\csharp\\c-sharp-player\\Part_1\\Core_Concepts\\Core_Concepts.csproj",
         "projectName": "Core_Concepts",
-        "projectPath": "/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/Core_Concepts.csproj",
-        "packagesPath": "/Users/mariemarcos/.nuget/packages/",
-        "outputPath": "/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/obj/",
+        "projectPath": "C:\\Users\\melin\\Dev\\csharp\\c-sharp-player\\Part_1\\Core_Concepts\\Core_Concepts.csproj",
+        "packagesPath": "C:\\Users\\melin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\melin\\Dev\\csharp\\c-sharp-player\\Part_1\\Core_Concepts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mariemarcos/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\melin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -358,7 +358,7 @@ void StationManticore()
         StationManticore();
     }
     Console.WriteLine("Manticore has been stationed. Clearing the plan. One moment...");
-    Thread.Sleep(1000);
+    Thread.Sleep(2000);
     Console.Clear();
     DisplayStatus();
 }
@@ -379,7 +379,7 @@ void DisplayStatus()
         round++;
         CalcRoundDamage(round);
         Console.WriteLine("Here is the current report: ");
-        Thread.Sleep(1000);
+        Thread.Sleep(2000);
         Console.WriteLine("----------------------------------------------------------");
         Console.WriteLine($"STATUS: Round: {round} | City: {cityHealthCurrent}/{cityHealthStatic} | Manticore: {mantiHealthCurrent}/{mantiHealthStatic}");
         Console.WriteLine($"The cannon is expected to deal {roundDamage} damage this round.");
