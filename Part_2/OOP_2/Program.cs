@@ -2,27 +2,19 @@
 
 // Object-Oriented Principle #1: Encapsulation — Combining data (fields) and the operations on that data (methods) into a well-defined unit (like a class).
 
+Arrow newArrow = MakeArrow();
+Console.WriteLine($"A {newArrow._arrowhead} and {newArrow._fletching} arrow at {newArrow._length}cm long.");
+Console.WriteLine($"The cost of this arrow is: ${newArrow.GetCost()}");
 
-// Arrow make = new Arrow();
-// Console.WriteLine(make._arrowhead);
-// Console.WriteLine(make._fletching);
-// Console.WriteLine(make._length);
-
-
-// Arrow.GetArrowHead(make._arrowhead);
-
-// Console.WriteLine(make._arrowhead);
-
-// Arrow MakeArrow(){
-
-// }
-
-GetArrowHead();
-GetFletching();
-GetLength();
+Arrow MakeArrow(){
+    ArrowHead arrowhead = GetArrowHead();
+    Fletching fletching = GetFletching();
+    float length = GetLength();
+    return new Arrow(arrowhead, fletching, length);
+}
 
 ArrowHead GetArrowHead(){
-    Console.Write("What type of arrowhead? ");
+    Console.Write("What type of arrowhead? (Steel, Wood, Obsidian) ");
     string userInput = Console.ReadLine().ToLower();
     return userInput switch{
         "steel" => ArrowHead.Steel,
@@ -33,7 +25,7 @@ ArrowHead GetArrowHead(){
 }
 
 Fletching GetFletching(){
-    Console.Write("What type of fletching? ");
+    Console.Write("What type of fletching? (Plastic, Turkey, Goose) ");
     string userInput = Console.ReadLine().ToLower();
     return userInput switch{
         "plastic" => Fletching.Plastic,
@@ -44,11 +36,12 @@ Fletching GetFletching(){
 }
 
 float GetLength(){
-    Console.Write("Length 60 - 100 ");
-    float userInput = Convert.ToSingle(Console.ReadLine());
-    float cost = userInput * 0.05f;
-    Console.WriteLine($"${cost}");
-    return cost;
+    float userInput = 0;
+    while (userInput < 60 || userInput > 100 ){
+        Console.Write("How long in centimeters? (60 - 100) ");
+        userInput = Convert.ToSingle(Console.ReadLine());
+    }
+    return userInput;
 }
 
 class Arrow {
@@ -56,29 +49,32 @@ class Arrow {
     public Fletching _fletching;
     public float _length;
 
+
     public Arrow(ArrowHead arrowhead, Fletching fletching, float length) {
         _arrowhead = arrowhead;
         _fletching = fletching;
         _length = length;
     }
 
+    public float GetCost() {
+        
+        float arrowHeadCost = _arrowhead switch 
+        {
+            ArrowHead.Steel => 10,
+            ArrowHead.Wood => 3,
+            ArrowHead.Obsidian => 5,
+        };
+        
+        float fletchingCost = _fletching switch
+        {
+            Fletching.Plastic => 10,
+            Fletching.Turkey => 5,
+            Fletching.Goose => 3,
+        };
+
+        return (_length * 0.05f) + arrowHeadCost + fletchingCost;
+    }
+
 }
     enum ArrowHead { Steel, Wood, Obsidian};
     enum Fletching { Plastic, Turkey, Goose};
-
-
-
-
-// Score best = new Score();
-// best.name = "M";
-// best.points = 100;
-// best.level = 15;
-
-// Console.WriteLine($"{best.name}, {best.points}, {best.level}");
-// class Score
-// {
-//     public string name;
-//     public int points;
-//     public int level;
-// public bool EarnedStar() => (points / level) > 1000; 
-// }
