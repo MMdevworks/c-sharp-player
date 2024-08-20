@@ -13,9 +13,13 @@
 
 // Console.WriteLine(make._arrowhead);
 
-Arrow MakeArrow(){
+// Arrow MakeArrow(){
 
-}
+// }
+
+GetArrowHead();
+GetFletching();
+GetLength();
 
 ArrowHead GetArrowHead(){
     Console.Write("What type of arrowhead? ");
@@ -25,9 +29,10 @@ ArrowHead GetArrowHead(){
         "wood" => ArrowHead.Wood,
         "obsidian" => ArrowHead.Obsidian,
     };
+    Console.Write(userInput);
 }
 
-ArrowHead GetFletching(){
+Fletching GetFletching(){
     Console.Write("What type of fletching? ");
     string userInput = Console.ReadLine().ToLower();
     return userInput switch{
@@ -35,8 +40,16 @@ ArrowHead GetFletching(){
         "turkey" => Fletching.Turkey,
         "goose" => Fletching.Goose,
     };
+    Console.Write(userInput);
 }
 
+float GetLength(){
+    Console.Write("Length 60 - 100 ");
+    float userInput = Convert.ToSingle(Console.ReadLine());
+    float cost = userInput * 0.05f;
+    Console.WriteLine($"${cost}");
+    return cost;
+}
 
 class Arrow {
     public ArrowHead _arrowhead;
