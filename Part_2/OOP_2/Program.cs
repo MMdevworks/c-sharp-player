@@ -3,16 +3,39 @@
 // Object-Oriented Principle #1: Encapsulation — Combining data (fields) and the operations on that data (methods) into a well-defined unit (like a class).
 
 
-Arrow make = new Arrow();
+// Arrow make = new Arrow();
 // Console.WriteLine(make._arrowhead);
 // Console.WriteLine(make._fletching);
 // Console.WriteLine(make._length);
 
-Console.Write("What type of arrowhead? ");
-make._arrowhead = Console.ReadLine().ToLower();
+
 // Arrow.GetArrowHead(make._arrowhead);
 
-Console.WriteLine(make._arrowhead);
+// Console.WriteLine(make._arrowhead);
+
+Arrow MakeArrow(){
+
+}
+
+ArrowHead GetArrowHead(){
+    Console.Write("What type of arrowhead? ");
+    string userInput = Console.ReadLine().ToLower();
+    return userInput switch{
+        "steel" => ArrowHead.Steel,
+        "wood" => ArrowHead.Wood,
+        "obsidian" => ArrowHead.Obsidian,
+    };
+}
+
+ArrowHead GetFletching(){
+    Console.Write("What type of fletching? ");
+    string userInput = Console.ReadLine().ToLower();
+    return userInput switch{
+        "plastic" => Fletching.Plastic,
+        "turkey" => Fletching.Turkey,
+        "goose" => Fletching.Goose,
+    };
+}
 
 
 class Arrow {
@@ -20,7 +43,7 @@ class Arrow {
     public Fletching _fletching;
     public float _length;
 
-    public Arrow(ArrowHead, Fletching, float length) {
+    public Arrow(ArrowHead arrowhead, Fletching fletching, float length) {
         _arrowhead = arrowhead;
         _fletching = fletching;
         _length = length;
