@@ -3,7 +3,7 @@
 // Object-Oriented Principle #1: Encapsulation — Combining data (fields) and the operations on that data (methods) into a well-defined unit (like a class).
 
 Arrow newArrow = MakeArrow();
-Console.WriteLine($"A {newArrow._arrowhead} and {newArrow._fletching} arrow at {newArrow._length}cm long.");
+Console.WriteLine($"A {newArrow.GetArrowHeadType()} and {newArrow.GetFletchingType()} arrow at {newArrow.GetShaftLength()}cm long.");
 Console.WriteLine($"The cost of this arrow is: ${newArrow.GetCost()}");
 
 Arrow MakeArrow(){
@@ -45,11 +45,14 @@ float GetLength(){
 }
 
 class Arrow {
-    public ArrowHead _arrowhead;
-    public Fletching _fletching;
-    public float _length;
+    private ArrowHead _arrowhead;
+    private Fletching _fletching;
+    private float _length;
 
-
+    public ArrowHead GetArrowHeadType() => _arrowhead;
+    public Fletching GetFletchingType() => _fletching;
+    public float GetShaftLength() => _length;
+    
     public Arrow(ArrowHead arrowhead, Fletching fletching, float length) {
         _arrowhead = arrowhead;
         _fletching = fletching;
