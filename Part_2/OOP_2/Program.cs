@@ -183,20 +183,28 @@ Console.WriteLine($"A {newArrow.HeadType} and {newArrow.FletchingType} arrow at 
 Console.WriteLine($"The cost of this arrow is: ${newArrow.GetCost()}");
 
 Arrow MakeArrow(){
-    Console.Write("Custom or Predesign? ");
-    string userInput = Console.ReadLine().ToLower();
-    if (userInput == "novice") {
-        return Arrow.CreateNoviceArrow();
-    } else if (userInput == "marksman") {
-        return Arrow.CreateMarksmanArrow();
-    } else if (userInput == "elite") {
-        return Arrow.CreateEliteArrow();
-    }else {
-        ArrowHead arrowhead = GetArrowHead();
-        Fletching fletching = GetFletching();
-        float length = GetLength();
-        return new Arrow(arrowhead, fletching, length);
-    }
+    Console.WriteLine("Welcome to the Arrow Shop, please make a selection:");
+    Console.WriteLine("1 - Novice");
+    Console.WriteLine("2 - Marksman");
+    Console.WriteLine("3 - Elite");
+    Console.WriteLine("4 - Custom");
+    string userInput = Console.ReadLine();
+    
+    Arrow newArrow = userInput switch
+    {
+        "1" => Arrow.CreateNoviceArrow(),
+        "2" => Arrow.CreateMarksmanArrow(),
+        "3" => Arrow.CreateEliteArrow(),
+        _ => CreateCustomArrow(),
+    };
+    return newArrow;
+}
+
+Arrow CreateCustomArrow(){
+    ArrowHead arrowhead = GetArrowHead();
+    Fletching fletching = GetFletching();
+    float length = GetLength();
+    return new Arrow(arrowhead, fletching, length);
 }
 
 ArrowHead GetArrowHead(){
@@ -254,9 +262,9 @@ class Arrow {
         get => _length;
     }
 
-    public static Arrow CreateNoviceArrow() => new Arrow (ArrowHead.Wood, Fletching.Goose, 75);
-    public static Arrow CreateMarksmanArrow() => new Arrow (ArrowHead.Steel, Fletching.Goose, 65);
-    public static Arrow CreateEliteArrow() => new Arrow (ArrowHead.Steel, Fletching.Plastic, 95);
+    public static Arrow CreateNoviceArrow() => new Arrow(ArrowHead.Wood, Fletching.Goose, 75);
+    public static Arrow CreateMarksmanArrow() => new Arrow(ArrowHead.Steel, Fletching.Goose, 65);
+    public static Arrow CreateEliteArrow() => new Arrow(ArrowHead.Steel, Fletching.Plastic, 95);
 
     public float GetCost() {
         
