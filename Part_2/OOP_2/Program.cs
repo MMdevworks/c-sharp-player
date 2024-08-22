@@ -179,8 +179,12 @@
 
 
 Arrow newArrow = MakeArrow();
-Console.WriteLine($"A {newArrow.HeadType} and {newArrow.FletchingType} arrow at {newArrow.ShaftLength}cm long.");
-Console.WriteLine($"The cost of this arrow is: ${newArrow.GetCost()}");
+OrderAndPrice();
+
+void OrderAndPrice(){
+    Console.WriteLine($"A {newArrow.HeadType} and {newArrow.FletchingType} arrow at {newArrow.ShaftLength}cm long.");
+    Console.WriteLine($"The cost of this arrow is: ${newArrow.GetCost()}");
+}
 
 Arrow MakeArrow(){
     Console.WriteLine("Welcome to the Arrow Shop, please make a selection:");
