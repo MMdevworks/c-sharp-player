@@ -1,0 +1,15 @@
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/OOP_2/obj/Debug/net8.0/OOP_2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/OOP_2/obj/Debug/net8.0/OOP_2.AssemblyInfoInputs.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/OOP_2/obj/Debug/net8.0/OOP_2.AssemblyInfo.cs
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/OOP_2/obj/Debug/net8.0/OOP_2.csproj.CoreCompileInputs.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/OOP_2/obj/Debug/net8.0/OOP_2.sourcelink.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/OOP_2/bin/Debug/net8.0/OOP_2
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/OOP_2/bin/Debug/net8.0/OOP_2.deps.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/OOP_2/bin/Debug/net8.0/OOP_2.runtimeconfig.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/OOP_2/bin/Debug/net8.0/OOP_2.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/OOP_2/bin/Debug/net8.0/OOP_2.pdb
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/OOP_2/obj/Debug/net8.0/OOP_2.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/OOP_2/obj/Debug/net8.0/refint/OOP_2.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/OOP_2/obj/Debug/net8.0/OOP_2.pdb
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/OOP_2/obj/Debug/net8.0/OOP_2.genruntimeconfig.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/OOP_2/obj/Debug/net8.0/ref/OOP_2.dll
