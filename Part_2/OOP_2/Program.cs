@@ -175,7 +175,9 @@
 // }
 //     enum ArrowHead { Steel, Wood, Obsidian};
 //     enum Fletching { Plastic, Turkey, Goose};
-// -------------------------------------------------------------
+
+
+// --------- Utilize static methods within the arrow class, user may choose a premade or custom arrow.
 
 
 Arrow newArrow = MakeArrow();
