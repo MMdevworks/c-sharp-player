@@ -62,6 +62,8 @@ foreach (CardColor color in colors){
     foreach (CardRank rank in ranks){
         Card card = new Card(color, rank);
         Console.WriteLine($"The {card.Color} {card.Rank}");
+        // bool issymbol = card.IsSymbol;
+        // Console.WriteLine($"=> IsSymbol: {issymbol}");
     }
 };
 
@@ -73,6 +75,9 @@ public class Card {
         Color = color;
         Rank = rank;
     }
+
+    public bool IsSymbol => Rank == CardRank.Ampersand || Rank == CardRank.Caret || Rank == CardRank.Dollar || Rank == CardRank.Percent;
+    public bool IsNumber => !IsSymbol;
 }
 
 public enum CardColor {Red, Green, Blue, Yellow};
