@@ -112,17 +112,27 @@ public class Door{
         if(door._doorState == DoorStatus.Closed) {
             door._doorState = DoorStatus.Locked;
             Thread.Sleep(1000);
-            Console.WriteLine($"The door is {door._doorState}.");
+            // Console.WriteLine($"The door is {door._doorState}.");
             UserSelection(door);
             return _doorState;
         }
-        Console.WriteLine($"The door is {door._doorState}.");
+        // Console.WriteLine($"The door is {door._doorState}.");
         Thread.Sleep(1000);
         UserSelection(door);
         return _doorState;
     }
     public DoorStatus Unlock(Door door){
-        return _doorState = DoorStatus.Unlocked;
+        if(door._doorState == DoorStatus.Locked) {
+            door._doorState = DoorStatus.Unlocked;
+            Thread.Sleep(1000);
+            // Console.WriteLine($"The door is {door._doorState}.");
+            UserSelection(door);
+            return _doorState;
+        }
+        // Console.WriteLine($"The door is {door._doorState}.");
+        Thread.Sleep(1000);
+        UserSelection(door);
+        return _doorState;
     }
     public DoorStatus Open(Door door){
         Console.WriteLine("To open the door, please enter the passcode.");
@@ -130,13 +140,13 @@ public class Door{
         if (userInput == _passcode) 
         {
             door._doorState = DoorStatus.Open;
-            Console.WriteLine("Passcode Accepted");
-            Console.WriteLine($"The door is {door._doorState}");
+            // Console.WriteLine("Passcode Accepted");
+            // Console.WriteLine($"The door is {door._doorState}");
             Thread.Sleep(1000);
             UserSelection(door);
             return _doorState;
         }
-        Console.WriteLine("Passcode Incorrect");
+        // Console.WriteLine("Passcode Incorrect");
         Thread.Sleep(1000);
         UserSelection(door);
         return _doorState;
@@ -144,23 +154,20 @@ public class Door{
 
     public DoorStatus Close(Door door){
         if (door._doorState == DoorStatus.Open){
-            Console.WriteLine("Closed the door.");
-            Thread.Sleep(1000);
+            // Console.WriteLine("Closed the door.");
+            door._doorState = DoorStatus.Closed;
             UserSelection(door);
-            return _doorState = DoorStatus.Closed;
+            return _doorState;
         }
-        Console.WriteLine("The door is not open.");
+        // Console.WriteLine("The door is not open.");
         Thread.Sleep(1000);
         UserSelection(door);
         return _doorState;
     }
 
     public void UserSelection(Door door){
-        Console.WriteLine("What do you want to do?");
-        Console.WriteLine("Open");
-        Console.WriteLine("Close");
-        Console.WriteLine("Lock");
-        Console.WriteLine("Unlock");
+        Console.WriteLine($"The door is {door._doorState}");
+        Console.Write("What do you want to do? (open, close, lock, unlock) ");
         string userInput = Console.ReadLine().ToLower();
         if (userInput == "open" ) {
             door.Open(door);
