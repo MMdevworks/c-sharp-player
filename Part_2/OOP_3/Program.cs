@@ -86,14 +86,18 @@
 
 // ----- Door Class ------
 
-// CreateDoor();
-// void CreateDoor(){
-Door newDoor = new Door();
-Console.Write("Generating door, provide a passcode...: ");
-int userCode = Convert.ToInt32(Console.ReadLine());
-newDoor._passcode = userCode;
-// }
-newDoor.UserSelection(newDoor);
+
+
+
+CreateDoor();
+
+void CreateDoor(){
+    Door newDoor = new Door();
+    Console.Write("Generating door, provide a passcode...: ");
+    int userCode = Convert.ToInt32(Console.ReadLine());
+    newDoor._passcode = userCode;
+    newDoor.UserSelection(newDoor);
+}
 
 public class Door{
     public DoorStatus _doorState; 
@@ -158,9 +162,25 @@ public class Door{
         return _doorState;
     }
 
+    public void ChangeCode(Door door) {
+        Console.Write("To change the code, enter the current code: ");
+        int userCode = Convert.ToInt32(Console.ReadLine());
+        if (userCode == door._passcode){
+            Console.Write("Access granted, you may enter the new code:  ");
+            int newCode = Convert.ToInt32(Console.ReadLine());
+            door._passcode = newCode;
+            Console.Write($"New passcode set. {door._passcode}");
+            Thread.Sleep(1000);
+            UserSelection(door);
+        }
+        Thread.Sleep(1000);
+        Console.Write("Incorrect passcode. ");
+        UserSelection(door);
+    }
+
     public void UserSelection(Door door){
         Console.WriteLine($"The door is {door._doorState}");
-        Console.Write("What do you want to do? (open, close, lock, unlock) ");
+        Console.Write("What do you want to do? (open, close, lock, unlock, change code) ");
         string userInput = Console.ReadLine().ToLower();
         if (userInput == "open" ) {
             door.Open(door);
@@ -173,6 +193,9 @@ public class Door{
         } 
         else if (userInput == "unlock"){
             door.Unlock(door);
+        }
+        else if (userInput == "change code"){
+            door.ChangeCode(door);
         }
         else {
             Console.WriteLine("Invalid Selection");
