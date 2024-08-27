@@ -12,9 +12,9 @@
 
 
 // Objects (instance of a class)
-    // Player 1
-    // Player 2
-    // RPS game
+    // > Player 1
+    // > Player 2
+    // > RPS game
 
 // Classes
     // -class Player-
@@ -39,15 +39,20 @@
 // • The game needs to *track and *display how many moves the player has made.
 
 // Objects
+    // > Player
+    // > GameBoard
     
 // Classes
     // -class Player-
-        // • Track and display player moves
-        // •
+        // • Take user commands - (-Console-)
+        // • Display round
+        // • Display game board state - (-Board-)
 
     // -class GameBoard-
         // • Generate random puzzle
+        // • Manipulate and track gameboard - (-Player-)
         // • Display state of game board
+        // • Track move count
         // • Know game end condition and tell the player win/lose - (-Player-)
 
 
@@ -56,6 +61,12 @@
 // ---- Hangman ----
 
 // Requirements
+// • The game picks a word at random from a list of words.
+// • The game’s state is displayed to the player, as shown above.
+// • The player can pick a letter. If they pick a letter they already chose, pick again.
+// • The game should update its state based on the letter the player picked.
+// • The game needs to detect a win for the player (all letters have been guessed).
+// • The game needs to detect a loss for the player (out of incorrect guesses).
 
 // Objects
     
@@ -67,6 +78,14 @@
 // ---- Tic Tac Toe ----
 
 // Requirements
+// • Two human players take turns entering their choice using the same keyboard.
+// • The players designate which square they want to play in. Hint: You might consider using the number
+//   pad as a guide. For example, if they enter 7, they have chosen the top left corner of the board.
+// • The game should prevent players from choosing squares that are already occupied. If such a move
+//   is attempted, the player should be told of the problem and given another chance.
+// • The game must detect when a player wins or when the board is full with no winner (draw/”cat”).
+// • When the game is over, the outcome is displayed to the players.
+// • The state of the board must be displayed to the player after each play. 
 
 // Objects
     
