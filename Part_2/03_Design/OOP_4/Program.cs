@@ -1,15 +1,16 @@
 ﻿// ------ Object Oriented Design -------
+// Notes:
+//  * Single Responsibility Principle (SRP) - each class having a clear and focused purpose.
 
 // ---- Rock Paper Scissors ----
 
-// Requirements
+// Requirements:
 // • Two human players compete against each other.
 // • Each player *picks Rock, Paper, or Scissors.
 // • Depending on the players’ choices, a winner is *determined: Rock beats Scissors, Scissors beats Paper, Paper beats Rock. If both players pick the same option, it is a draw.
 // • The game must *display who won the round.
 // • The game will keep *running rounds until the window is closed but must *remember the historical
 //   record of how many times each player won and how many draws there were.
-
 
 // Objects (instance of a class)
     // > Player 1
@@ -20,14 +21,17 @@
     // -class Player-
         // • Knows the name of the players
         // • Sets player choice
-        // • Knows players Score? - (-Score-)
     // -class RPSGame-
         // • Knows game logic and win/end conditions
-        // • Knows what players exist - (-Player-)
+        // • Knows what players exist - (from -Player-)
         // • Updates the game each round
         // • Display Result
     // -class ScoreRecord-
-        // • Keeps track of round winner
+        // • Knows players Score
+        // • Keeps track of round winner and historical game records
+
+// In summary - a Player 1 and Player 2 will be instantiated along with a new RPSGame. There will be 3 classes (Player, RPSGame, ScoreRecord) these 3 classes will handle the requirements with methods within each.
+
 
 // ---- 15 Puzzle ----
 
@@ -44,35 +48,41 @@
     
 // Classes
     // -class Player-
-        // • Take user commands - (-Console-)
-        // • Display round
-        // • Display game board state - (-Board-)
-
+        // • Take user commands - (from -Console-)
+    // -class GeneratePuzzle-
+        // • Generate random puzzle (moved into its own class to handle complexity and board changes)
     // -class GameBoard-
-        // • Generate random puzzle
-        // • Manipulate and track gameboard - (-Player-)
+        // • Manipulate and track gameboard - (from -Player-)
+        // • Display round
         // • Display state of game board
         // • Track move count
         // • Know game end condition and tell the player win/lose - (-Player-)
 
 
-
-
 // ---- Hangman ----
 
 // Requirements
-// • The game picks a word at random from a list of words.
-// • The game’s state is displayed to the player, as shown above.
-// • The player can pick a letter. If they pick a letter they already chose, pick again.
-// • The game should update its state based on the letter the player picked.
-// • The game needs to detect a win for the player (all letters have been guessed).
-// • The game needs to detect a loss for the player (out of incorrect guesses).
+// • The game *picks a word at random from a list of words.
+// • The game’s state is *displayed to the player.
+// • The player can *pick a letter. If they pick a letter they already chose, pick again.
+// • The game should *update its state based on the letter the player picked.
+// • The game needs to *detect a win for the player (all letters have been guessed).
+// • The game needs to *detect a loss for the player (out of incorrect guesses).
 
 // Objects
-    
+    // > Player
+    // > GameManager
+
 // Classes
-    // -class -
-        // •
+    // -class Player-
+        // • Take user input: pick a letter logic - (from -Console-)
+    // -class GenerateWord-
+        // • Generates word for the game
+    // -class GameManager -
+        // • Displays initial game - (from -GenerateWord-)
+        // • Update and display state after user guess - (from -Player-)
+        // • Detect Win logic
+        // • Detect Loss logic
 
 
 // ---- Tic Tac Toe ----
