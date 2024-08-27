@@ -85,20 +85,31 @@
         // • Detect Loss logic
 
 
-// ---- Tic Tac Toe ----
+// ---- Tic-Tac-Toe ----
 
 // Requirements
-// • Two human players take turns entering their choice using the same keyboard.
-// • The players designate which square they want to play in. Hint: You might consider using the number
+// • Two human players take turns *entering their choice using the same keyboard.
+// • The players *designate which square they want to play in. Hint: You might consider using the number
 //   pad as a guide. For example, if they enter 7, they have chosen the top left corner of the board.
-// • The game should prevent players from choosing squares that are already occupied. If such a move
+// • The game should *prevent players from choosing squares that are already occupied. If such a move
 //   is attempted, the player should be told of the problem and given another chance.
-// • The game must detect when a player wins or when the board is full with no winner (draw/”cat”).
+// • The game must *detect when a player wins or when the board is full with no winner (draw/”cat”).
 // • When the game is over, the outcome is displayed to the players.
 // • The state of the board must be displayed to the player after each play. 
 
 // Objects
-    
+    // > Player 1
+    // > Player 2
+    // > GameManager
+
 // Classes
-    // -class -
-        // •
+    // -class Player-
+        // • Take user input: pick a square logic - (from -Console-)
+        // • Handle invalid choices (possibly move within GameManager)
+    // -class GameDisplay -
+        // • Displays state of the board after each play - (from -Player-)
+    // -class GameManager -
+        // • Determine player turn
+        // • Prevent player choosing occupied square
+        // • Detect game condition win/draw
+        // • Display outcome of the game
