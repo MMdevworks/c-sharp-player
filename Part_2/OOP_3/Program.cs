@@ -208,60 +208,55 @@
 // 1 upper, 1 lower, 1 number
 // no capital 'T' or '&'
 
-// bool hasAllowedUpperCase = false;
-// bool hasLowerCase = false;
-// bool hasDigit = false;
-// bool inRange = false;
-// // bool allConditionsMet = false;
+Console.WriteLine("Enter a password");
+string userPassword = Console.ReadLine();
+PasswordValidator pass = new PasswordValidator(userPassword);
 
-// Console.WriteLine("Enter a password");
-// string userPassword = Console.ReadLine();
-// PasswordValidator pass = new PasswordValidator(userPassword);
+pass.Validate();
 
-// // void CheckEachChar(password){
-//     foreach (char c in userPassword){
-//         // Console.WriteLine(c);
-//         if (char.IsUpper(c) && c != 'T' && c != '&'){
-//             hasAllowedUpperCase = true;
-//         }
-//         if (c == 'T' || c == '&'){
-//             hasAllowedUpperCase = false;
-//         }
-//         if (char.IsLower(c)){
-//             hasLowerCase = true;
-//         }
-//         if (char.IsDigit(c)){
-//             hasDigit = true;
-//         }
-//         if (userPassword.Length >=6 && userPassword.Length <= 13){
-//             inRange = true;
-//         }
-//     }
-// // }
+public class PasswordValidator {
+    private string _password;
+    private bool _hasAllowedUpperCase;
+    private bool _hasLowerCase;
+    private bool _hasDigit;
+    private bool _hasRange;
 
-// Validation();
+    public PasswordValidator(string password) {
+        _password = password;
+        CheckEachChar();
+    }
 
-// void Validation() {
-//     if (hasAllowedUpperCase && hasLowerCase && hasDigit && inRange) {
-//         Console.WriteLine("VALID");
-//         // allConditionsMet = true;
-//     }else {
-//     Console.WriteLine("INVALID");
-//     }
-// }
+    private void CheckEachChar(){
+        foreach (char c in _password){
+            if (char.IsUpper(c) && c != 'T' && c != '&'){
+                _hasAllowedUpperCase = true;
+            }
+            if (c == 'T' || c == '&'){
+                _hasAllowedUpperCase = false;
+                break;
+            }
+            if (char.IsLower(c)){
+                _hasLowerCase = true;
+            }
+            if (char.IsDigit(c)){
+               _hasDigit = true;
+            }
+            if (_password.Length >= 6 && _password.Length <= 13){
+                _hasRange = true;
+            }
+        }
+    }
 
-// public class PasswordValidator {
-
-//     private string _password;
-
-//     public PasswordValidator(string password) {
-//         _password = password;
-//     }
-// }
-
-
-
-
+    public bool Validate() {
+        if (_hasAllowedUpperCase && _hasLowerCase && _hasDigit && _hasRange) {
+            Console.WriteLine("VALID");
+            return true;
+        }else {
+            Console.WriteLine("INVALID");
+            return false;
+        }
+    }
+}
 
 
 
