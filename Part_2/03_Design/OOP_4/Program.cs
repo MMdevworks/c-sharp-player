@@ -113,3 +113,65 @@
         // • Prevent player choosing occupied square
         // • Detect game condition win/draw
         // • Display outcome of the game
+
+GameDisplay newDisplay = new GameDisplay();
+newDisplay.RenderBoard();
+
+// GameManager newGame = new GameManager();
+// newGame.ValidateMove();
+
+class GameManager {
+    public string PlayerOne;
+    public string PlayerTwo;
+    public int TurnNumber;
+
+    public GameManager()
+    {
+        PlayerOne = "Player 1";
+        PlayerTwo = "Player 2";
+        TurnNumber = 0;
+    }
+
+    public void ValidateMove() {
+        while(TurnNumber < 10){
+            TurnNumber++;
+            if (TurnNumber % 2 != 0) {
+                Console.Write("Player 1 pick a square");
+                Console.ReadLine();
+            } else {
+                Console.Write("Player 2 pick a square");
+                Console.ReadLine();
+            }
+        }
+    }
+}
+
+public class GameDisplay
+{
+    // 2D array for type char to represent the spaces on the game board.
+    private char[,] _board;
+
+    public GameDisplay()
+    {
+        // A 3 by 3 grid, numbered to represent user's available choices
+        _board = new char[3, 3] 
+        {
+            { '1', '2', '3' }, // 0
+            { '4', '5', '6' }, // 1
+            { '7', '8', '9' }  // 2
+        };
+    }
+
+    // Method to render the board
+    public void RenderBoard()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            Console.WriteLine($" {_board[i, 0]} | {_board[i, 1]} | {_board[i, 2]} ");
+            if (i < 2) Console.WriteLine("---+---+---");
+        }
+    }
+}
+
+
+// The console writeline checks the board at i, which to start is row/index 0, then it gets the  index 0 element in that row, then index 1 then index 2. If the row is less then 2, which at this point it is 0 then write out "---+---+---" below the first writeline. Because it's in a for loop of i < 3 it moves on to the next row (1) and does the same, then the next row 2... and because 2 is not < 2 it doesnt write out "---+---+---"
