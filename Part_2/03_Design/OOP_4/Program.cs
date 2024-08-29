@@ -127,37 +127,37 @@ class GameManager {
 
     public GameManager()
     {
-        PlayerOne = "Player 1 [X]";
-        PlayerTwo = "Player 2 [O]";
+        PlayerOne = "Player [X]";
+        PlayerTwo = "Player [O]";
         TurnNumber = 0;
         _gameDisplay = new GameDisplay(); //initialize game display
     }
 
     public void ValidateMove() {
         _gameDisplay.RenderBoard();
-        while(TurnNumber < 9 && !Win ){ 
-            TurnNumber++;
-            if (TurnNumber % 2 != 0) {
-                Console.Write($"{PlayerOne} pick a square ");
-                int squareX = int.Parse(Console.ReadLine());
-                _gameDisplay.UpdateBoard(squareX, 'X');
-                // _gameDisplay.RenderBoard();
-            } else {
-                Console.Write($"{PlayerTwo} pick a square ");
-                int squareO = int.Parse(Console.ReadLine());
-                _gameDisplay.UpdateBoard(squareO, 'O');
-                // _gameDisplay.RenderBoard();
+
+        while(TurnNumber < 9 && !Win ) { 
+            bool validMove = false; 
+
+            while (!validMove) {
+                if (TurnNumber % 2 == 0) 
+                {
+                    Console.Write($"{PlayerOne} pick a square ");
+                    int squareX = int.Parse(Console.ReadLine());
+                    validMove = _gameDisplay.UpdateBoard(squareX, 'X');
+                } else
+                {
+                    Console.Write($"{PlayerTwo} pick a square ");
+                    int squareO = int.Parse(Console.ReadLine());
+                    validMove = _gameDisplay.UpdateBoard(squareO, 'O'); //update validMove with the bool return of UpdateBoard
+                }
             }
+            TurnNumber++;
         }
         Console.WriteLine("Game Over");
     }
-
-    // public void SetPlayerPiece(int square, char playerPiece) {
-    //     _gameDisplay.UpdateBoard(square, playerPiece);
-    //     _gameDisplay.RenderBoard();
-    // }
-
 }
+
 
 public class GameDisplay
 {
@@ -185,7 +185,8 @@ public class GameDisplay
         }
     }
 
-    public bool UpdateBoard (int square, char playerPiece) {
+    public bool UpdateBoard (int square, char playerPiece) 
+    {
         // Zero-index the squares: 
         
         //                         c0  c1  c2
@@ -194,20 +195,22 @@ public class GameDisplay
         //   4 | 5 | 6   --->  r1:  3 | 4 | 5 
         //  ---+---+---            ---+---+---
         //   7 | 8 | 9         r2:  6 | 7 | 8
- 
+        Thread.Sleep(1000);
+        Console.WriteLine("");
+        
         int row = (square - 1) / 3;
         int col = (square - 1) % 3;
 
-        if (_gameDisplay.Board[row, col] == 'X' || _gameDisplay.Board[row, col] == 'O') {
+        if (_board[row, col] == 'X' || _board[row, col] == 'O') 
+        {
             Console.WriteLine("That square is occupied, choose again!");
             return false;
-            }
-        _gameDisplay.Board[row, col] == playerPiece;
-        _gameDisplay.RenderBoard();
-        return true;
         }
+        _board[row, col] = playerPiece;
+        RenderBoard();
+        return true;
+    }
 }
-
 
 
 
