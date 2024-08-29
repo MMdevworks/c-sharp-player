@@ -117,33 +117,50 @@
 GameDisplay newDisplay = new GameDisplay();
 newDisplay.RenderBoard();
 
-// GameManager newGame = new GameManager();
-// newGame.ValidateMove();
+GameManager newGame = new GameManager();
+newGame.ValidateMove();
 
 class GameManager {
     public string PlayerOne;
     public string PlayerTwo;
     public int TurnNumber;
+    private GameDisplay _gameDisplay;
 
     public GameManager()
     {
-        PlayerOne = "Player 1";
-        PlayerTwo = "Player 2";
+        PlayerOne = "Player 1 [X]";
+        PlayerTwo = "Player 2 [O]";
         TurnNumber = 0;
+        _gameDisplay = new GameDisplay(); //initialize game display
     }
 
     public void ValidateMove() {
-        while(TurnNumber < 10){
+        _gameDisplay.RenderBoard();
+        while(TurnNumber < 9){
             TurnNumber++;
             if (TurnNumber % 2 != 0) {
-                Console.Write("Player 1 pick a square");
-                Console.ReadLine();
+                Console.Write($"{PlayerOne} pick a square");
+                int squareX = Console.ReadLine();
+                // call a method that takes an int from player
+                SetPlayerPiece(squareX, 'X');
             } else {
-                Console.Write("Player 2 pick a square");
-                Console.ReadLine();
+                Console.Write($"{PlayerTwo} pick a square");
+                int squareO = Console.ReadLine();
+                SetPlayerPiece(squareX, 'O');
             }
         }
+        Console.WriteLine("Game Over");
     }
+
+    public void SetPlayerPiece(int square, char playerSymbol) {
+        if (square == 1) {
+
+        }
+        //player logic
+        //call RenderBoard
+        // ex: player chooses 1 --> char[0, 1] = playerX choice
+    }
+
 }
 
 public class GameDisplay
@@ -155,10 +172,10 @@ public class GameDisplay
     {
         // A 3 by 3 grid, numbered to represent user's available choices
         _board = new char[3, 3] 
-        {
-            { '1', '2', '3' }, // 0
-            { '4', '5', '6' }, // 1
-            { '7', '8', '9' }  // 2
+        {                      
+            { '1', '2', '3' }, // row index 0 element index {0, 1, 2}
+            { '4', '5', '6' }, // row index 1 element index {0, 1, 2}
+            { '7', '8', '9' }  // row index 2 element index {0, 1, 2}
         };
     }
 
