@@ -1,0 +1,15 @@
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/03_Design/OOP_4/obj/Debug/net8.0/OOP_4.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/03_Design/OOP_4/obj/Debug/net8.0/OOP_4.AssemblyInfoInputs.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/03_Design/OOP_4/obj/Debug/net8.0/OOP_4.AssemblyInfo.cs
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/03_Design/OOP_4/obj/Debug/net8.0/OOP_4.csproj.CoreCompileInputs.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/03_Design/OOP_4/obj/Debug/net8.0/OOP_4.sourcelink.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/03_Design/OOP_4/bin/Debug/net8.0/OOP_4
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/03_Design/OOP_4/bin/Debug/net8.0/OOP_4.deps.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/03_Design/OOP_4/bin/Debug/net8.0/OOP_4.runtimeconfig.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/03_Design/OOP_4/bin/Debug/net8.0/OOP_4.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/03_Design/OOP_4/bin/Debug/net8.0/OOP_4.pdb
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/03_Design/OOP_4/obj/Debug/net8.0/OOP_4.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/03_Design/OOP_4/obj/Debug/net8.0/refint/OOP_4.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/03_Design/OOP_4/obj/Debug/net8.0/OOP_4.pdb
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/03_Design/OOP_4/obj/Debug/net8.0/OOP_4.genruntimeconfig.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/03_Design/OOP_4/obj/Debug/net8.0/ref/OOP_4.dll
