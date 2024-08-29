@@ -114,8 +114,6 @@
         // • Detect game condition win/draw
         // • Display outcome of the game
 
-GameDisplay newDisplay = new GameDisplay();
-newDisplay.RenderBoard();
 
 GameManager newGame = new GameManager();
 newGame.ValidateMove();
@@ -140,26 +138,26 @@ class GameManager {
             TurnNumber++;
             if (TurnNumber % 2 != 0) {
                 Console.Write($"{PlayerOne} pick a square");
-                int squareX = Console.ReadLine();
+                int squareX = int.Parse(Console.ReadLine());
                 // call a method that takes an int from player
-                SetPlayerPiece(squareX, 'X');
+                // SetPlayerPiece(squareX, 'X');
+                _gameDisplay.UpdateBoard(squareX, 'X');
+                _gameDisplay.RenderBoard();
             } else {
                 Console.Write($"{PlayerTwo} pick a square");
-                int squareO = Console.ReadLine();
-                SetPlayerPiece(squareX, 'O');
+                int squareO = int.Parse(Console.ReadLine());
+                // SetPlayerPiece(squareO, 'O');
+                _gameDisplay.UpdateBoard(squareO, 'O');
+                _gameDisplay.RenderBoard();
             }
         }
         Console.WriteLine("Game Over");
     }
 
-    public void SetPlayerPiece(int square, char playerSymbol) {
-        if (square == 1) {
-
-        }
-        //player logic
-        //call RenderBoard
-        // ex: player chooses 1 --> char[0, 1] = playerX choice
-    }
+    // public void SetPlayerPiece(int square, char playerPiece) {
+    //     _gameDisplay.UpdateBoard(square, playerPiece);
+    //     _gameDisplay.RenderBoard();
+    // }
 
 }
 
@@ -186,6 +184,25 @@ public class GameDisplay
         {
             Console.WriteLine($" {_board[i, 0]} | {_board[i, 1]} | {_board[i, 2]} ");
             if (i < 2) Console.WriteLine("---+---+---");
+        }
+    }
+
+    public void UpdateBoard (int square, char playerPiece) {
+        switch (square)
+        {
+            // user chooses number -> the board at [row index, index of element in row] = current player's symbol
+            case 1: _board[0, 0] = playerPiece; break;
+            case 2: _board[0, 1] = playerPiece; break;
+            case 3: _board[0, 2] = playerPiece; break;
+            case 4: _board[1, 0] = playerPiece; break;
+            case 5: _board[1, 1] = playerPiece; break;
+            case 6: _board[1, 2] = playerPiece; break;
+            case 7: _board[2, 0] = playerPiece; break;
+            case 8: _board[2, 1] = playerPiece; break;
+            case 9: _board[2, 2] = playerPiece; break;
+            default:
+                Console.WriteLine("Invalid square selected.");
+                break;
         }
     }
 }
