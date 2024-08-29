@@ -130,6 +130,7 @@ class GameManager {
         PlayerOne = "Player [X]";
         PlayerTwo = "Player [O]";
         TurnNumber = 0;
+        Win = false;
         _gameDisplay = new GameDisplay(); //initialize game display
     }
 
@@ -145,16 +146,54 @@ class GameManager {
                     Console.Write($"{PlayerOne} pick a square ");
                     int squareX = int.Parse(Console.ReadLine());
                     validMove = _gameDisplay.UpdateBoard(squareX, 'X');
+                    if (validMove) {
+                        Win = CheckWinCondition('X'); // check if win
+                        if (Win) {
+                            Console.WriteLine($"{PlayerOne} wins!");
+                            return;
+                        }
+                    }
                 } else
                 {
                     Console.Write($"{PlayerTwo} pick a square ");
                     int squareO = int.Parse(Console.ReadLine());
                     validMove = _gameDisplay.UpdateBoard(squareO, 'O'); //update validMove with the bool return of UpdateBoard
+                    if (validMove) {
+                        Win = CheckWinCondition('O'); 
+                        if (Win) {
+                            Console.WriteLine($"{PlayerTwo} wins!");
+                            return;
+                        }
+                    }                                    
                 }
             }
             TurnNumber++;
         }
+        if (!Win) {
+            Console.WriteLine("It's a draw!");
+        }
         Console.WriteLine("Game Over");
+    }
+
+    private bool CheckWinCondition(char playerPiece) {
+        char[,] board = _gameDisplay.Board;
+        for (int i = 0; i < 3; i++) {
+        // Check rows
+            if (board[i, 0] == playerPiece && board[i, 1] == playerPiece && board[i, 2] == playerPiece) {
+                return true;
+            }
+        // Check columns
+            if (board[0, i] == playerPiece && board[1, i] == playerPiece && board[2, i] == playerPiece) {
+                return true;
+            }
+        }
+        // Check diagonals
+        if ((board[0, 0] == playerPiece && board[1, 1] == playerPiece && board[2, 2] == playerPiece) ||
+            (board[0, 2] == playerPiece && board[1, 1] == playerPiece && board[2, 0] == playerPiece)) {
+            return true;
+        }
+
+        return false;
     }
 }
 
@@ -175,6 +214,11 @@ public class GameDisplay
         };
     }
 
+    //to allow access to private _board
+    public char[,] Board{
+        get { return _board; }
+    }
+
     // Method to render the board
     public void RenderBoard()
     {
@@ -188,14 +232,15 @@ public class GameDisplay
     public bool UpdateBoard (int square, char playerPiece) 
     {
         // Zero-index the squares: 
-        
         //                         c0  c1  c2
         //   1 | 2 | 3         r0:  0 | 1 | 2    ex: square 5 => _board [r1,c1]
         //  ---+---+---            ---+---+---   ex: square 3 => _board [r0,c2]
         //   4 | 5 | 6   --->  r1:  3 | 4 | 5 
         //  ---+---+---            ---+---+---
         //   7 | 8 | 9         r2:  6 | 7 | 8
-        Thread.Sleep(1000);
+        
+        Console.Clear();
+        Thread.Sleep(100);
         Console.WriteLine("");
         
         int row = (square - 1) / 3;
@@ -211,7 +256,3 @@ public class GameDisplay
         return true;
     }
 }
-
-
-
-// The console writeline checks the board at i, which to start is row/index 0, then it gets the  index 0 element in that row, then index 1 then index 2. If the row is less then 2, which at this point it is 0 then write out "---+---+---" below the first writeline. Because it's in a for loop of i < 3 it moves on to the next row (1) and does the same, then the next row 2... and because 2 is not < 2 it doesnt write out "---+---+---"
