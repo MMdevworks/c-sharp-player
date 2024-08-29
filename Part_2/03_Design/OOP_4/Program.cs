@@ -114,7 +114,7 @@
         // • Detect game condition win/draw
         // • Display outcome of the game
 
-
+Console.WriteLine("TIC-TAC-TOE");
 GameManager newGame = new GameManager();
 newGame.ValidateMove();
 
@@ -122,6 +122,7 @@ class GameManager {
     public string PlayerOne;
     public string PlayerTwo;
     public int TurnNumber;
+    public bool Win;
     private GameDisplay _gameDisplay;
 
     public GameManager()
@@ -134,19 +135,16 @@ class GameManager {
 
     public void ValidateMove() {
         _gameDisplay.RenderBoard();
-        while(TurnNumber < 9){
+        while(TurnNumber < 9 && !Win ){ 
             TurnNumber++;
             if (TurnNumber % 2 != 0) {
-                Console.Write($"{PlayerOne} pick a square");
+                Console.Write($"{PlayerOne} pick a square ");
                 int squareX = int.Parse(Console.ReadLine());
-                // call a method that takes an int from player
-                // SetPlayerPiece(squareX, 'X');
                 _gameDisplay.UpdateBoard(squareX, 'X');
                 _gameDisplay.RenderBoard();
             } else {
-                Console.Write($"{PlayerTwo} pick a square");
+                Console.Write($"{PlayerTwo} pick a square ");
                 int squareO = int.Parse(Console.ReadLine());
-                // SetPlayerPiece(squareO, 'O');
                 _gameDisplay.UpdateBoard(squareO, 'O');
                 _gameDisplay.RenderBoard();
             }
@@ -187,24 +185,24 @@ public class GameDisplay
         }
     }
 
-    public void UpdateBoard (int square, char playerPiece) {
-        switch (square)
-        {
-            // user chooses number -> the board at [row index, index of element in row] = current player's symbol
-            case 1: _board[0, 0] = playerPiece; break;
-            case 2: _board[0, 1] = playerPiece; break;
-            case 3: _board[0, 2] = playerPiece; break;
-            case 4: _board[1, 0] = playerPiece; break;
-            case 5: _board[1, 1] = playerPiece; break;
-            case 6: _board[1, 2] = playerPiece; break;
-            case 7: _board[2, 0] = playerPiece; break;
-            case 8: _board[2, 1] = playerPiece; break;
-            case 9: _board[2, 2] = playerPiece; break;
-            default:
-                Console.WriteLine("Invalid square selected.");
-                break;
-        }
-    }
+    // public void UpdateBoard (int square, char playerPiece) {
+    //     switch (square)
+    //     {
+    //         // user chooses number -> the board at [row index, index of element in row] = current player's symbol
+    //         case 1: _board[0, 0] = playerPiece; break;
+    //         case 2: _board[0, 1] = playerPiece; break;
+    //         case 3: _board[0, 2] = playerPiece; break;
+    //         case 4: _board[1, 0] = playerPiece; break;
+    //         case 5: _board[1, 1] = playerPiece; break;
+    //         case 6: _board[1, 2] = playerPiece; break;
+    //         case 7: _board[2, 0] = playerPiece; break;
+    //         case 8: _board[2, 1] = playerPiece; break;
+    //         case 9: _board[2, 2] = playerPiece; break;
+    //         default:
+    //             Console.WriteLine("Invalid square selected.");
+    //             break;
+    //     }
+    // }
 }
 
 
