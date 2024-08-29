@@ -141,12 +141,12 @@ class GameManager {
                 Console.Write($"{PlayerOne} pick a square ");
                 int squareX = int.Parse(Console.ReadLine());
                 _gameDisplay.UpdateBoard(squareX, 'X');
-                _gameDisplay.RenderBoard();
+                // _gameDisplay.RenderBoard();
             } else {
                 Console.Write($"{PlayerTwo} pick a square ");
                 int squareO = int.Parse(Console.ReadLine());
                 _gameDisplay.UpdateBoard(squareO, 'O');
-                _gameDisplay.RenderBoard();
+                // _gameDisplay.RenderBoard();
             }
         }
         Console.WriteLine("Game Over");
@@ -185,25 +185,30 @@ public class GameDisplay
         }
     }
 
-    // public void UpdateBoard (int square, char playerPiece) {
-    //     switch (square)
-    //     {
-    //         // user chooses number -> the board at [row index, index of element in row] = current player's symbol
-    //         case 1: _board[0, 0] = playerPiece; break;
-    //         case 2: _board[0, 1] = playerPiece; break;
-    //         case 3: _board[0, 2] = playerPiece; break;
-    //         case 4: _board[1, 0] = playerPiece; break;
-    //         case 5: _board[1, 1] = playerPiece; break;
-    //         case 6: _board[1, 2] = playerPiece; break;
-    //         case 7: _board[2, 0] = playerPiece; break;
-    //         case 8: _board[2, 1] = playerPiece; break;
-    //         case 9: _board[2, 2] = playerPiece; break;
-    //         default:
-    //             Console.WriteLine("Invalid square selected.");
-    //             break;
-    //     }
-    // }
+    public bool UpdateBoard (int square, char playerPiece) {
+        // Zero-index the squares: 
+        
+        //                         c0  c1  c2
+        //   1 | 2 | 3         r0:  0 | 1 | 2    ex: square 5 => _board [r1,c1]
+        //  ---+---+---            ---+---+---   ex: square 3 => _board [r0,c2]
+        //   4 | 5 | 6   --->  r1:  3 | 4 | 5 
+        //  ---+---+---            ---+---+---
+        //   7 | 8 | 9         r2:  6 | 7 | 8
+ 
+        int row = (square - 1) / 3;
+        int col = (square - 1) % 3;
+
+        if (_gameDisplay.Board[row, col] == 'X' || _gameDisplay.Board[row, col] == 'O') {
+            Console.WriteLine("That square is occupied, choose again!");
+            return false;
+            }
+        _gameDisplay.Board[row, col] == playerPiece;
+        _gameDisplay.RenderBoard();
+        return true;
+        }
 }
+
+
 
 
 // The console writeline checks the board at i, which to start is row/index 0, then it gets the  index 0 element in that row, then index 1 then index 2. If the row is less then 2, which at this point it is 0 then write out "---+---+---" below the first writeline. Because it's in a for loop of i < 3 it moves on to the next row (1) and does the same, then the next row 2... and because 2 is not < 2 it doesnt write out "---+---+---"
