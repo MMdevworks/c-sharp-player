@@ -147,7 +147,7 @@ class GameManager {
                     int squareX = int.Parse(Console.ReadLine());
                     validMove = _gameDisplay.UpdateBoard(squareX, 'X');
                     if (validMove) {
-                        Win = CheckWinCondition('X'); // Check if Player X wins
+                        Win = CheckWinCondition('X'); // check if win
                         if (Win) {
                             Console.WriteLine($"{PlayerOne} wins!");
                             return;
@@ -159,7 +159,7 @@ class GameManager {
                     int squareO = int.Parse(Console.ReadLine());
                     validMove = _gameDisplay.UpdateBoard(squareO, 'O'); //update validMove with the bool return of UpdateBoard
                     if (validMove) {
-                        Win = CheckWinCondition('O'); // Check if Player O wins
+                        Win = CheckWinCondition('O'); 
                         if (Win) {
                             Console.WriteLine($"{PlayerTwo} wins!");
                             return;
@@ -177,13 +177,12 @@ class GameManager {
 
     private bool CheckWinCondition(char playerPiece) {
         char[,] board = _gameDisplay.Board;
-        // Check rows, columns, and diagonals
         for (int i = 0; i < 3; i++) {
-            // Check rows
+        // Check rows
             if (board[i, 0] == playerPiece && board[i, 1] == playerPiece && board[i, 2] == playerPiece) {
                 return true;
             }
-            // Check columns
+        // Check columns
             if (board[0, i] == playerPiece && board[1, i] == playerPiece && board[2, i] == playerPiece) {
                 return true;
             }
@@ -194,7 +193,7 @@ class GameManager {
             return true;
         }
 
-        return false; // No win condition met
+        return false;
     }
 }
 
@@ -233,14 +232,15 @@ public class GameDisplay
     public bool UpdateBoard (int square, char playerPiece) 
     {
         // Zero-index the squares: 
-        
         //                         c0  c1  c2
         //   1 | 2 | 3         r0:  0 | 1 | 2    ex: square 5 => _board [r1,c1]
         //  ---+---+---            ---+---+---   ex: square 3 => _board [r0,c2]
         //   4 | 5 | 6   --->  r1:  3 | 4 | 5 
         //  ---+---+---            ---+---+---
         //   7 | 8 | 9         r2:  6 | 7 | 8
-        Thread.Sleep(1000);
+        
+        Console.Clear();
+        Thread.Sleep(100);
         Console.WriteLine("");
         
         int row = (square - 1) / 3;
