@@ -1,12 +1,4 @@
 ﻿Pack mediumPack = new Pack(10, 20f, 30f);
-// Knife myKnife = new Knife();
-// Console.WriteLine(mediumPack.MaxCount);
-// Console.WriteLine(mediumPack.MaxWeight);
-// Console.WriteLine(mediumPack.MaxVolume);
-// mediumPack.Add(myKnife);
-// Console.WriteLine(mediumPack.CurrentCount);
-// Console.WriteLine(mediumPack.CurrentWeight);
-// Console.WriteLine(mediumPack.CurrentVolume);
 
 while (true)
 {
@@ -29,8 +21,18 @@ while (true)
         4 => new Water(),
         5 => new Food(),
         6 => new Sword(),
+        _=> null
     };
-    mediumPack.Add(userItem);
+
+    if (userItem == null)
+    {
+        Console.WriteLine("Invalid selection, pick again.");
+        continue;
+    }
+
+    if (!mediumPack.Add(userItem)){
+        break;
+    };
 
     foreach (InventoryItem item in mediumPack.Items)
     {
