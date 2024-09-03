@@ -1,5 +1,93 @@
-﻿
+﻿Pack mediumPack = new Pack(10, 20f, 30f);
 
+while (true)
+{
+    Console.WriteLine($"Items in pack: {mediumPack.CurrentCount}/{mediumPack.MaxCount} | Weight: {mediumPack.CurrentWeight}/{mediumPack.MaxWeight} | Volume: {mediumPack.CurrentVolume}/{mediumPack.MaxVolume}");
+
+    Console.WriteLine("What do you want to pack? Choose it's number:");
+    Console.WriteLine("1 - Knife");
+    Console.WriteLine("2 - Bow");
+    Console.WriteLine("3 - Rope");
+    Console.WriteLine("4 - Water");
+    Console.WriteLine("5 - Food");
+    Console.WriteLine("6 - Sword");
+    int selection = Convert.ToInt32(Console.ReadLine());
+
+    InventoryItem userItem = selection switch
+    {
+        1 => new Knife(),
+        2 => new Bow(),
+        3 => new Rope(),
+        4 => new Water(),
+        5 => new Food(),
+        6 => new Sword(),
+        _=> null
+    };
+
+    if (userItem == null)
+    {
+        Console.WriteLine("Invalid selection, pick again.");
+        continue;
+    }
+
+    if (!mediumPack.Add(userItem)){
+        break;
+    };
+
+    foreach (InventoryItem item in mediumPack.Items)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+public class Pack 
+{
+    public InventoryItem[] Items;
+
+    public int MaxCount;
+    public float MaxWeight;
+    public float MaxVolume;
+
+    public int CurrentCount; //cant be > total
+    public float CurrentWeight; //cant be > max
+    public float CurrentVolume; //cant be > max
+
+    public Pack(int maxCount, float maxWeight, float maxVolume)
+    {
+        MaxCount = maxCount;
+        MaxWeight = maxWeight;
+        MaxVolume = maxVolume;
+        // make the items array the size of max count
+        Items = new InventoryItem[maxCount];
+    }
+
+// allows you to add items of any type to the pack’s contents.
+// fail/return false if adding the item would exceed count/wt/vol limits
+    public bool Add(InventoryItem item)
+    {
+        if (CurrentCount >= MaxCount) 
+        {
+            Console.WriteLine("PACK IS FULL");
+            return false;
+        }
+        if (CurrentWeight + item.Weight > MaxWeight)
+        {
+            Console.WriteLine("PACK TOO HEAVY"); 
+            return false;
+        }
+        if (CurrentVolume + item.Volume > MaxVolume)
+        {
+            Console.WriteLine("NOT ENOUGH ROOM");
+            return false;
+        }
+        // add items at index of current count
+        Items[CurrentCount] = item;
+        CurrentWeight += item.Weight;
+        CurrentVolume += item.Volume;
+        CurrentCount++;
+        return true;
+    }
+}
 
 public class InventoryItem {
     public float Weight;
@@ -10,102 +98,10 @@ public class InventoryItem {
         Volume = volume;
     }
 }
-//  Each class should pass the correct weight and volume to the base class constructor but should be creatable themselves with a parameterless constructor(forexample,new Rope()ornew Sword()).
 
-public class Knife : InventoryItem 
-{
-    // parameterless constructor needs to be defined when a parameter constructor is also defined
-    public Knife : base(0,0)
-    {
-
-    }
-    public Knife() : base(0.1f, 0.05f)
-    {
-    }
-}
-
-public class Bow : InventoryItem 
-{
-    public Bow : base(0,0)
-    {
-
-    }
-    public Bow() : base(1f, 4f)
-    {
-    }
-}
-
-public class Rope : InventoryItem 
-{
-    public Rope : base(0,0)
-    {
-
-    }
-    public Rope() : base(1f, 1.5f)
-    {
-    }
-}
-
-public class Water : InventoryItem 
-{
-    public Water : base(0,0)
-    {
-
-    }
-    public Water() : base(2f, 3f)
-    {
-    }
-}
-
-public class Food : InventoryItem 
-{
-    public Food : base(0,0)
-    {
-
-    }
-    public Food() : base(1f, 0.5f)
-    {
-    }
-}
-
-public class Sword : InventoryItem 
-{
-    public Sword : base(0,0)
-    {
-
-    }
-    public Sword() : base(1f, 4f)
-    {
-    }
-}
-// Build a Pack class that can store an array of items. The total number of items, the maximum weight, and the maximum volume are provided at creation time and cannot change afterward.
-public class Pack 
-{
-    public InventoryItem[] Items;
-
-    public int ItemTotal;
-    public float MaxWeight;
-    public float MaxVolume;
-
-    public int CurrentCount; //cant be > total
-    public float CurrentWeight; //cant be > max
-    public float CurrentVolume; //cant be > max
-
-    public Pack(int itemTotal, float maxWeight, float maxVolume)
-    {
-        ItemTotal = itemTotal;
-        MaxWeight = maxWeight;
-        MaxVolume = maxVolume;
-    }
-
-// allows you to add items of any type to the pack’s contents.
-// fail/return false if adding the item would exceed count/wt/vol limits
-    public bool Add(InventoryItem item)
-    {
-        if (CurrentCount > ItemsTotal) return false;
-        if (CurrentWeight + item.Weight > MaxWeight) return false;
-        if (CurrentVolume + item.Volume > MaxVolume) return false;
-        Items
-        ItemTotal++;
-    }
-}
+public class Knife : InventoryItem {public Knife() : base(0.1f, 0.05f){}}
+public class Bow : InventoryItem {public Bow() : base(1f, 4f){}}
+public class Rope : InventoryItem {public Rope() : base(1f, 1.5f){}}
+public class Water : InventoryItem {public Water() : base(2f, 3f){}}
+public class Food : InventoryItem {public Food() : base(1f, 0.5f){}}
+public class Sword : InventoryItem {public Sword() : base(1f, 4f){}}
