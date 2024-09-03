@@ -78,3 +78,30 @@ public class Sword : InventoryItem
     {
     }
 }
+// Build a Pack class that can store an array of items. The total number of items, the maximum weight, and the maximum volume are provided at creation time and cannot change afterward.
+public class Pack 
+{
+    public InventoryItem[] Items;
+    public int ItemTotal;
+    public float MaxWeight;
+    public float MaxVolume;
+
+    public int CurrentCount;
+    public float CurrentWeight;
+    public float CurrentVolume;
+
+    public Pack(int itemTotal, float maxWeight, float maxVolume)
+    {
+        ItemTotal = itemTotal;
+        MaxWeight = maxWeight;
+        MaxVolume = maxVolume;
+
+    }
+
+// Make a public bool Add(InventoryItem item) method to Pack that allows you to add items of any type to the pack’s contents. This method should fail (return false and not modify the pack’s fields) if adding the item would cause it to exceed the pack’s item, weight, or volume limit.
+    public bool Add(InventoryItem item)
+    {
+        Items
+        ItemTotal++;
+    }
+}
