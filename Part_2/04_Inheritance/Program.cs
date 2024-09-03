@@ -10,7 +10,19 @@ Console.WriteLine(mediumPack.CurrentVolume);
 
 Console.WriteLine($"Items in pack: {mediumPack.CurrentCount}/{mediumPack.MaxCount} | Weight: {mediumPack.CurrentWeight}/{mediumPack.MaxWeight} | Volume: {mediumPack.CurrentVolume}/{mediumPack.MaxVolume}");
 
-Console.WriteLine("What do you want to pack?")
+Console.WriteLine("What do you want to pack? Choose it's number:");
+int selection = Convert.ToInt32(Console.ReadLine());
+
+InventoryItem userItem = selection switch
+{
+    1 => new Knife(),
+    2 => new Bow(),
+    3 => new Rope(),
+    4 => new Water(),
+    5 => new Food(),
+    6 => new Sword(),
+}
+
 public class Pack 
 {
     public InventoryItem[] Items;
