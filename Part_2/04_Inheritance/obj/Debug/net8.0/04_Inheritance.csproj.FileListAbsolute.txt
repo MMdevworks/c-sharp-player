@@ -3,3 +3,13 @@
 /Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/obj/Debug/net8.0/04_Inheritance.AssemblyInfo.cs
 /Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/obj/Debug/net8.0/04_Inheritance.csproj.CoreCompileInputs.cache
 /Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/obj/Debug/net8.0/04_Inheritance.sourcelink.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/bin/Debug/net8.0/04_Inheritance
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/bin/Debug/net8.0/04_Inheritance.deps.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/bin/Debug/net8.0/04_Inheritance.runtimeconfig.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/bin/Debug/net8.0/04_Inheritance.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/bin/Debug/net8.0/04_Inheritance.pdb
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/obj/Debug/net8.0/04_Inheritance.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/obj/Debug/net8.0/refint/04_Inheritance.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/obj/Debug/net8.0/04_Inheritance.pdb
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/obj/Debug/net8.0/04_Inheritance.genruntimeconfig.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/obj/Debug/net8.0/ref/04_Inheritance.dll
