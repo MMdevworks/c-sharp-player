@@ -82,25 +82,29 @@ public class Sword : InventoryItem
 public class Pack 
 {
     public InventoryItem[] Items;
+
     public int ItemTotal;
     public float MaxWeight;
     public float MaxVolume;
 
-    public int CurrentCount;
-    public float CurrentWeight;
-    public float CurrentVolume;
+    public int CurrentCount; //cant be > total
+    public float CurrentWeight; //cant be > max
+    public float CurrentVolume; //cant be > max
 
     public Pack(int itemTotal, float maxWeight, float maxVolume)
     {
         ItemTotal = itemTotal;
         MaxWeight = maxWeight;
         MaxVolume = maxVolume;
-
     }
 
-// Make a public bool Add(InventoryItem item) method to Pack that allows you to add items of any type to the pack’s contents. This method should fail (return false and not modify the pack’s fields) if adding the item would cause it to exceed the pack’s item, weight, or volume limit.
+// allows you to add items of any type to the pack’s contents.
+// fail/return false if adding the item would exceed count/wt/vol limits
     public bool Add(InventoryItem item)
     {
+        if (CurrentCount > ItemsTotal) return false;
+        if (CurrentWeight + item.Weight > MaxWeight) return false;
+        if (CurrentVolume + item.Volume > MaxVolume) return false;
         Items
         ItemTotal++;
     }
