@@ -1,27 +1,38 @@
 ﻿Pack mediumPack = new Pack(10, 20f, 30f);
-Knife myKnife = new Knife();
-Console.WriteLine(mediumPack.MaxCount);
-Console.WriteLine(mediumPack.MaxWeight);
-Console.WriteLine(mediumPack.MaxVolume);
-mediumPack.Add(myKnife);
-Console.WriteLine(mediumPack.CurrentCount);
-Console.WriteLine(mediumPack.CurrentWeight);
-Console.WriteLine(mediumPack.CurrentVolume);
+// Knife myKnife = new Knife();
+// Console.WriteLine(mediumPack.MaxCount);
+// Console.WriteLine(mediumPack.MaxWeight);
+// Console.WriteLine(mediumPack.MaxVolume);
+// mediumPack.Add(myKnife);
+// Console.WriteLine(mediumPack.CurrentCount);
+// Console.WriteLine(mediumPack.CurrentWeight);
+// Console.WriteLine(mediumPack.CurrentVolume);
 
-Console.WriteLine($"Items in pack: {mediumPack.CurrentCount}/{mediumPack.MaxCount} | Weight: {mediumPack.CurrentWeight}/{mediumPack.MaxWeight} | Volume: {mediumPack.CurrentVolume}/{mediumPack.MaxVolume}");
-
-Console.WriteLine("What do you want to pack? Choose it's number:");
-int selection = Convert.ToInt32(Console.ReadLine());
-
-InventoryItem userItem = selection switch
+while (true)
 {
-    1 => new Knife(),
-    2 => new Bow(),
-    3 => new Rope(),
-    4 => new Water(),
-    5 => new Food(),
-    6 => new Sword(),
+    Console.WriteLine($"Items in pack: {mediumPack.CurrentCount}/{mediumPack.MaxCount} | Weight: {mediumPack.CurrentWeight}/{mediumPack.MaxWeight} | Volume: {mediumPack.CurrentVolume}/{mediumPack.MaxVolume}");
+
+    Console.WriteLine("What do you want to pack? Choose it's number:");
+    Console.WriteLine("1 - Knife");
+    Console.WriteLine("2 - Bow");
+    Console.WriteLine("3 - Rope");
+    Console.WriteLine("4 - Water");
+    Console.WriteLine("5 - Food");
+    Console.WriteLine("6 - Sword");
+    int selection = Convert.ToInt32(Console.ReadLine());
+
+    InventoryItem userItem = selection switch
+    {
+        1 => new Knife(),
+        2 => new Bow(),
+        3 => new Rope(),
+        4 => new Water(),
+        5 => new Food(),
+        6 => new Sword(),
+    };
+    mediumPack.Add(userItem);
 }
+
 
 public class Pack 
 {
@@ -50,7 +61,7 @@ public class Pack
         if (CurrentWeight + item.Weight > MaxWeight) return false;
         if (CurrentVolume + item.Volume > MaxVolume) return false;
         CurrentWeight += item.Weight;
-        CurrentVolume = item.Volume;
+        CurrentVolume += item.Volume;
         CurrentCount++;
         return true;
     }
