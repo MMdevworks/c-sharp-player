@@ -1,5 +1,6 @@
 ﻿
-
+Pack mediumPack = new Pack(0, 5, 4.5);
+Console.WriteLine(mediumPack.Weight());
 
 public class InventoryItem {
     public float Weight;
@@ -14,11 +15,6 @@ public class InventoryItem {
 
 public class Knife : InventoryItem 
 {
-    // parameterless constructor needs to be defined when a parameter constructor is also defined
-    public Knife : base(0,0)
-    {
-
-    }
     public Knife() : base(0.1f, 0.05f)
     {
     }
@@ -26,10 +22,6 @@ public class Knife : InventoryItem
 
 public class Bow : InventoryItem 
 {
-    public Bow : base(0,0)
-    {
-
-    }
     public Bow() : base(1f, 4f)
     {
     }
@@ -37,10 +29,6 @@ public class Bow : InventoryItem
 
 public class Rope : InventoryItem 
 {
-    public Rope : base(0,0)
-    {
-
-    }
     public Rope() : base(1f, 1.5f)
     {
     }
@@ -48,10 +36,6 @@ public class Rope : InventoryItem
 
 public class Water : InventoryItem 
 {
-    public Water : base(0,0)
-    {
-
-    }
     public Water() : base(2f, 3f)
     {
     }
@@ -59,10 +43,6 @@ public class Water : InventoryItem
 
 public class Food : InventoryItem 
 {
-    public Food : base(0,0)
-    {
-
-    }
     public Food() : base(1f, 0.5f)
     {
     }
@@ -70,10 +50,6 @@ public class Food : InventoryItem
 
 public class Sword : InventoryItem 
 {
-    public Sword : base(0,0)
-    {
-
-    }
     public Sword() : base(1f, 4f)
     {
     }
@@ -100,12 +76,15 @@ public class Pack
 
 // allows you to add items of any type to the pack’s contents.
 // fail/return false if adding the item would exceed count/wt/vol limits
-    public bool Add(InventoryItem item)
-    {
-        if (CurrentCount > ItemsTotal) return false;
-        if (CurrentWeight + item.Weight > MaxWeight) return false;
-        if (CurrentVolume + item.Volume > MaxVolume) return false;
-        Items
-        ItemTotal++;
-    }
+//     public bool Add(InventoryItem item)
+//     {
+//         if (CurrentCount > ItemsTotal) return false;
+//         if (CurrentWeight + item.Weight > MaxWeight) return false;
+//         if (CurrentVolume + item.Volume > MaxVolume) return false;
+//         Items
+//         ItemTotal++;
+//     }
 }
+
+//create pack 
+// add items to pack from menu

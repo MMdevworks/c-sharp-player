@@ -1,0 +1,5 @@
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/obj/Debug/net8.0/04_Inheritance.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/obj/Debug/net8.0/04_Inheritance.AssemblyInfoInputs.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/obj/Debug/net8.0/04_Inheritance.AssemblyInfo.cs
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/obj/Debug/net8.0/04_Inheritance.csproj.CoreCompileInputs.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/04_Inheritance/obj/Debug/net8.0/04_Inheritance.sourcelink.json
