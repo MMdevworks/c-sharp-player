@@ -13,47 +13,12 @@ public class InventoryItem {
 }
 //  Each class should pass the correct weight and volume to the base class constructor but should be creatable themselves with a parameterless constructor(forexample,new Rope()ornew Sword()).
 
-public class Knife : InventoryItem 
-{
-    public Knife() : base(0.1f, 0.05f)
-    {
-    }
-}
-
-public class Bow : InventoryItem 
-{
-    public Bow() : base(1f, 4f)
-    {
-    }
-}
-
-public class Rope : InventoryItem 
-{
-    public Rope() : base(1f, 1.5f)
-    {
-    }
-}
-
-public class Water : InventoryItem 
-{
-    public Water() : base(2f, 3f)
-    {
-    }
-}
-
-public class Food : InventoryItem 
-{
-    public Food() : base(1f, 0.5f)
-    {
-    }
-}
-
-public class Sword : InventoryItem 
-{
-    public Sword() : base(1f, 4f)
-    {
-    }
-}
+public class Knife : InventoryItem {public Knife() : base(0.1f, 0.05f){}}
+public class Bow : InventoryItem {public Bow() : base(1f, 4f){}}
+public class Rope : InventoryItem {public Rope() : base(1f, 1.5f){}}
+public class Water : InventoryItem {public Water() : base(2f, 3f){}}
+public class Food : InventoryItem {public Food() : base(1f, 0.5f){}}
+public class Sword : InventoryItem {public Sword() : base(1f, 4f){}}
 // Build a Pack class that can store an array of items. The total number of items, the maximum weight, and the maximum volume are provided at creation time and cannot change afterward.
 public class Pack 
 {
