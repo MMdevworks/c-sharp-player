@@ -31,8 +31,12 @@ while (true)
         6 => new Sword(),
     };
     mediumPack.Add(userItem);
-}
 
+    foreach (InventoryItem item in mediumPack.Items)
+    {
+        Console.WriteLine(item);
+    }
+}
 
 public class Pack 
 {
@@ -51,15 +55,31 @@ public class Pack
         MaxCount = maxCount;
         MaxWeight = maxWeight;
         MaxVolume = maxVolume;
+        // make the items array the size of max count
+        Items = new InventoryItem[maxCount];
     }
 
 // allows you to add items of any type to the pack’s contents.
 // fail/return false if adding the item would exceed count/wt/vol limits
     public bool Add(InventoryItem item)
     {
-        if (CurrentCount > MaxCount) return false;
-        if (CurrentWeight + item.Weight > MaxWeight) return false;
-        if (CurrentVolume + item.Volume > MaxVolume) return false;
+        if (CurrentCount >= MaxCount) 
+        {
+            Console.WriteLine("PACK IS FULL");
+            return false;
+        }
+        if (CurrentWeight + item.Weight > MaxWeight)
+        {
+            Console.WriteLine("PACK TOO HEAVY"); 
+            return false;
+        }
+        if (CurrentVolume + item.Volume > MaxVolume)
+        {
+            Console.WriteLine("NOT ENOUGH ROOM");
+            return false;
+        }
+        // add items at index of current count
+        Items[CurrentCount] = item;
         CurrentWeight += item.Weight;
         CurrentVolume += item.Volume;
         CurrentCount++;
@@ -76,9 +96,6 @@ public class InventoryItem {
         Volume = volume;
     }
 }
-//  Each class should pass the correct weight and volume to the base class constructor but should be creatable themselves with a parameterless constructor(forexample,new Rope()ornew Sword()).
-// Build a Pack class that can store an array of items. The total number of items, the maximum weight, and the maximum volume are provided at creation time and cannot change afterward.
-
 
 public class Knife : InventoryItem {public Knife() : base(0.1f, 0.05f){}}
 public class Bow : InventoryItem {public Bow() : base(1f, 4f){}}
