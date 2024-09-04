@@ -1,0 +1,15 @@
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Override/bin/Debug/net8.0/05_Override
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Override/bin/Debug/net8.0/05_Override.deps.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Override/bin/Debug/net8.0/05_Override.runtimeconfig.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Override/bin/Debug/net8.0/05_Override.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Override/bin/Debug/net8.0/05_Override.pdb
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Override/obj/Debug/net8.0/05_Override.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Override/obj/Debug/net8.0/05_Override.AssemblyInfoInputs.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Override/obj/Debug/net8.0/05_Override.AssemblyInfo.cs
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Override/obj/Debug/net8.0/05_Override.csproj.CoreCompileInputs.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Override/obj/Debug/net8.0/05_Override.sourcelink.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Override/obj/Debug/net8.0/05_Override.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Override/obj/Debug/net8.0/refint/05_Override.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Override/obj/Debug/net8.0/05_Override.pdb
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Override/obj/Debug/net8.0/05_Override.genruntimeconfig.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Override/obj/Debug/net8.0/ref/05_Override.dll
