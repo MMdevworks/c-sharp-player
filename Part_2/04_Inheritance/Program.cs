@@ -42,15 +42,15 @@ while (true)
 
 public class Pack 
 {
-    public InventoryItem[] Items;
+    private InventoryItem[] _items;
 
-    public int MaxCount;
-    public float MaxWeight;
-    public float MaxVolume;
+    public int MaxCount { get; }
+    public float MaxWeight { get; }
+    public float MaxVolume { get; }
 
-    public int CurrentCount; //cant be > total
-    public float CurrentWeight; //cant be > max
-    public float CurrentVolume; //cant be > max
+    public int CurrentCount { get; private set; } //cant be > total
+    public float CurrentWeight { get; private set; } //cant be > max
+    public float CurrentVolume { get; private set; } //cant be > max
 
     public Pack(int maxCount, float maxWeight, float maxVolume)
     {
@@ -58,7 +58,13 @@ public class Pack
         MaxWeight = maxWeight;
         MaxVolume = maxVolume;
         // make the items array the size of max count
-        Items = new InventoryItem[maxCount];
+        _items = new InventoryItem[maxCount];
+    }
+
+    // public property to expose the  private _items array 
+    public InventoryItem[] Items
+    {
+        get { return _items; }
     }
 
 // allows you to add items of any type to the pack’s contents.
@@ -81,7 +87,7 @@ public class Pack
             return false;
         }
         // add items at index of current count
-        Items[CurrentCount] = item;
+        _items[CurrentCount] = item;
         CurrentWeight += item.Weight;
         CurrentVolume += item.Volume;
         CurrentCount++;
@@ -90,8 +96,8 @@ public class Pack
 }
 
 public class InventoryItem {
-    public float Weight;
-    public float Volume;
+    public float Weight { get; }
+    public float Volume { get; }
 
     public InventoryItem(float weight, float volume) {
         Weight = weight;
