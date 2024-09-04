@@ -48,9 +48,9 @@ public class Pack
     public float MaxWeight { get; }
     public float MaxVolume { get; }
 
-    public int CurrentCount { get; private set; } //cant be > total
-    public float CurrentWeight { get; private set; } //cant be > max
-    public float CurrentVolume { get; private set; } //cant be > max
+    public int CurrentCount { get; private set; }
+    public float CurrentWeight { get; private set; }
+    public float CurrentVolume { get; private set; }
 
     public Pack(int maxCount, float maxWeight, float maxVolume)
     {
@@ -67,8 +67,8 @@ public class Pack
         get { return _items; }
     }
 
-// allows you to add items of any type to the pack’s contents.
-// fail/return false if adding the item would exceed count/wt/vol limits
+    // add items to pack
+    // fail/return false if adding the item would exceed count/wt/vol limits
     public bool Add(InventoryItem item)
     {
         if (CurrentCount >= MaxCount) 
@@ -86,7 +86,7 @@ public class Pack
             Console.WriteLine("NOT ENOUGH ROOM");
             return false;
         }
-        // add items at index of current count
+        // add items to array at index of current count
         _items[CurrentCount] = item;
         CurrentWeight += item.Weight;
         CurrentVolume += item.Volume;
