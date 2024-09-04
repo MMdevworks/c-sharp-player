@@ -42,15 +42,15 @@ while (true)
 
 public class Pack 
 {
-    public InventoryItem[] Items;
+    private InventoryItem[] _items;
 
-    public int MaxCount;
-    public float MaxWeight;
-    public float MaxVolume;
+    public int MaxCount { get; }
+    public float MaxWeight { get; }
+    public float MaxVolume { get; }
 
-    public int CurrentCount; //cant be > total
-    public float CurrentWeight; //cant be > max
-    public float CurrentVolume; //cant be > max
+    public int CurrentCount { get; private set; }
+    public float CurrentWeight { get; private set; }
+    public float CurrentVolume { get; private set; }
 
     public Pack(int maxCount, float maxWeight, float maxVolume)
     {
@@ -58,11 +58,17 @@ public class Pack
         MaxWeight = maxWeight;
         MaxVolume = maxVolume;
         // make the items array the size of max count
-        Items = new InventoryItem[maxCount];
+        _items = new InventoryItem[maxCount];
     }
 
-// allows you to add items of any type to the pack’s contents.
-// fail/return false if adding the item would exceed count/wt/vol limits
+    // public property to expose the  private _items array 
+    public InventoryItem[] Items
+    {
+        get { return _items; }
+    }
+
+    // add items to pack
+    // fail/return false if adding the item would exceed count/wt/vol limits
     public bool Add(InventoryItem item)
     {
         if (CurrentCount >= MaxCount) 
@@ -80,8 +86,8 @@ public class Pack
             Console.WriteLine("NOT ENOUGH ROOM");
             return false;
         }
-        // add items at index of current count
-        Items[CurrentCount] = item;
+        // add items to array at index of current count
+        _items[CurrentCount] = item;
         CurrentWeight += item.Weight;
         CurrentVolume += item.Volume;
         CurrentCount++;
@@ -90,8 +96,8 @@ public class Pack
 }
 
 public class InventoryItem {
-    public float Weight;
-    public float Volume;
+    public float Weight { get; }
+    public float Volume { get; }
 
     public InventoryItem(float weight, float volume) {
         Weight = weight;
