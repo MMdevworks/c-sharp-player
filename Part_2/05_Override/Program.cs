@@ -2,7 +2,8 @@
 // Override is used to provide a new implementation for a method that is already defined in a base class
 // In this example ToString is method defined in the object base class - the ultimate parent of all classes in C#
 
-public class InventoryItem {
+public class InventoryItem 
+{
     public string Name { get; }
     public float Weight { get; }
     public float Volume { get; }
@@ -12,5 +13,10 @@ public class InventoryItem {
         Name = name;
         Weight = weight;
         Volume = volume;
+    }
+
+    public override string ToString()
+    {
+        return $"Item: {Name}, Weight: {Weight}, Volume: {Volume}";
     }
 }
