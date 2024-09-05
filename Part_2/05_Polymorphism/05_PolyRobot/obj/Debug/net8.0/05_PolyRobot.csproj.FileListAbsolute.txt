@@ -3,3 +3,13 @@
 /Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Polymorphism/05_PolyRobot/obj/Debug/net8.0/05_PolyRobot.AssemblyInfo.cs
 /Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Polymorphism/05_PolyRobot/obj/Debug/net8.0/05_PolyRobot.csproj.CoreCompileInputs.cache
 /Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Polymorphism/05_PolyRobot/obj/Debug/net8.0/05_PolyRobot.sourcelink.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Polymorphism/05_PolyRobot/bin/Debug/net8.0/05_PolyRobot
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Polymorphism/05_PolyRobot/bin/Debug/net8.0/05_PolyRobot.deps.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Polymorphism/05_PolyRobot/bin/Debug/net8.0/05_PolyRobot.runtimeconfig.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Polymorphism/05_PolyRobot/bin/Debug/net8.0/05_PolyRobot.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Polymorphism/05_PolyRobot/bin/Debug/net8.0/05_PolyRobot.pdb
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Polymorphism/05_PolyRobot/obj/Debug/net8.0/05_PolyRobot.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Polymorphism/05_PolyRobot/obj/Debug/net8.0/refint/05_PolyRobot.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Polymorphism/05_PolyRobot/obj/Debug/net8.0/05_PolyRobot.pdb
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Polymorphism/05_PolyRobot/obj/Debug/net8.0/05_PolyRobot.genruntimeconfig.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/05_Polymorphism/05_PolyRobot/obj/Debug/net8.0/ref/05_PolyRobot.dll

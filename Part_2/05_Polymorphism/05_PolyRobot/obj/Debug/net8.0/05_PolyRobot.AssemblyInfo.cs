@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("05_PolyRobot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4679c3051c45efef152054bc9d685e4ae119d43d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d90ef7426729e0473ad0bd7e50d41bac57b1b528")]
 [assembly: System.Reflection.AssemblyProductAttribute("05_PolyRobot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("05_PolyRobot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
