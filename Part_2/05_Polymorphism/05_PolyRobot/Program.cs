@@ -1,7 +1,7 @@
 ﻿Robot robot = new Robot();
 robot.Commands[0] = new OnCommand();
-robot.Commands[1] = new OffCommand();
-robot.Commands[2] = new OnCommand();
+robot.Commands[1] = new NorthCommand();
+robot.Commands[2] = new WestCommand();
 robot.Run();
 
 public class OnCommand : RobotCommand
@@ -19,6 +19,47 @@ public class OffCommand : RobotCommand
     {
         if (robot.IsPowered)
             robot.IsPowered = false;
+    }
+}
+
+public class NorthCommand : RobotCommand
+{
+    public override void Run(Robot robot)
+    {
+        if (robot.IsPowered)
+        {
+            robot.Y += 1;
+        }
+    }
+}
+public class SouthCommand : RobotCommand
+{
+    public override void Run(Robot robot)
+    {
+        if (robot.IsPowered)
+        {
+            robot.Y -= 1;
+        }
+    }
+}
+public class EastCommand : RobotCommand
+{
+    public override void Run(Robot robot)
+    {
+        if (robot.IsPowered)
+        {
+            robot.X += 1;
+        }
+    }
+}
+public class WestCommand : RobotCommand
+{
+    public override void Run(Robot robot)
+    {
+        if (robot.IsPowered)
+        {
+            robot.X -= 1;
+        }
     }
 }
 
