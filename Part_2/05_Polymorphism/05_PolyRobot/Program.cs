@@ -95,3 +95,38 @@ public class Robot
         Console.WriteLine($"[{X} {Y} {IsPowered}]"); }
     }
 }
+
+
+// Example refactor of commands to Expression-Bodied for a clean readable form
+// https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/expression-bodied-members
+// Expression-Bodied Syntax : You can use an expression body definition whenever the logic for any supported member, such as a method or property, consists of a single expression.
+
+// public class OnCommand : RobotCommand
+// {
+//     public override void Run(Robot robot) => robot.IsPowered = true;
+// }
+
+// public class OffCommand : RobotCommand
+// {
+//     public override void Run(Robot robot) => robot.IsPowered = false;
+// }
+
+// public class NorthCommand : RobotCommand
+// {
+//     public override void Run(Robot robot) { if (robot.IsPowered) robot.Y += 1; }
+// }
+
+// public class SouthCommand : RobotCommand
+// {
+//     public override void Run(Robot robot) { if (robot.IsPowered) robot.Y -= 1; }
+// }
+
+// public class EastCommand : RobotCommand
+// {
+//     public override void Run(Robot robot) { if (robot.IsPowered) robot.X += 1; }
+// }
+
+// public class WestCommand : RobotCommand
+// {
+//     public override void Run(Robot robot) { if (robot.IsPowered) robot.X -= 1; }
+// }
