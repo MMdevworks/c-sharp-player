@@ -1,7 +1,21 @@
 ﻿Robot robot = new Robot();
-robot.Commands[0] = new OnCommand();
-robot.Commands[1] = new NorthCommand();
-robot.Commands[2] = new WestCommand();
+
+Console.WriteLine("Enter 3 Commands: (on, off, north, south, east, west)");
+for (int i = 0; i < robot.Commands.Length; i++)
+{
+    string commands = Console.ReadLine().ToLower();
+    RobotCommand newCommand = commands switch 
+    {
+        "on" => new OnCommand(),
+        "off" => new OffCommand(),
+        "north" => new NorthCommand(),
+        "east" => new EastCommand(),
+        "south" => new SouthCommand(),
+        "west" => new WestCommand(),
+    };
+    robot.Commands[i] = newCommand;
+}
+
 robot.Run();
 
 public class OnCommand : RobotCommand
