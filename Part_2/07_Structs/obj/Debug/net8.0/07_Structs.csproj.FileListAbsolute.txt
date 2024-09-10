@@ -1,0 +1,15 @@
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/07_Structs/obj/Debug/net8.0/07_Structs.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/07_Structs/obj/Debug/net8.0/07_Structs.AssemblyInfoInputs.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/07_Structs/obj/Debug/net8.0/07_Structs.AssemblyInfo.cs
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/07_Structs/obj/Debug/net8.0/07_Structs.csproj.CoreCompileInputs.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/07_Structs/obj/Debug/net8.0/07_Structs.sourcelink.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/07_Structs/bin/Debug/net8.0/07_Structs
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/07_Structs/bin/Debug/net8.0/07_Structs.deps.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/07_Structs/bin/Debug/net8.0/07_Structs.runtimeconfig.json
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/07_Structs/bin/Debug/net8.0/07_Structs.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/07_Structs/bin/Debug/net8.0/07_Structs.pdb
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/07_Structs/obj/Debug/net8.0/07_Structs.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/07_Structs/obj/Debug/net8.0/refint/07_Structs.dll
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/07_Structs/obj/Debug/net8.0/07_Structs.pdb
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/07_Structs/obj/Debug/net8.0/07_Structs.genruntimeconfig.cache
+/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_2/07_Structs/obj/Debug/net8.0/ref/07_Structs.dll
