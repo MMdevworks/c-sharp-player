@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\melin\\.nuget\\packages\\": {}
+    "/Users/mariemarcos/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\melin\\Dev\\csharp\\c-sharp-player\\Part_1\\Core_Concepts\\Core_Concepts.csproj",
+      "projectUniqueName": "/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/Core_Concepts.csproj",
       "projectName": "Core_Concepts",
-      "projectPath": "C:\\Users\\melin\\Dev\\csharp\\c-sharp-player\\Part_1\\Core_Concepts\\Core_Concepts.csproj",
-      "packagesPath": "C:\\Users\\melin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\melin\\Dev\\csharp\\c-sharp-player\\Part_1\\Core_Concepts\\obj\\",
+      "projectPath": "/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/Core_Concepts.csproj",
+      "packagesPath": "/Users/mariemarcos/.nuget/packages/",
+      "outputPath": "/Users/mariemarcos/My Local Documents/Dev/Csharp/c-sharp-player/Part_1/Core_Concepts/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\melin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/mariemarcos/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
