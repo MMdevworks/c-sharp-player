@@ -1,4 +1,8 @@
-﻿Robot robot = new Robot();
+﻿// A class can have only one base class but can implement many interfaces.
+// The interface type defines an object’s interface or boundary by listing the methods, properties, etc., that an object must have without supplying any behavior for them. 
+// You could also think of an interface as defining a specific role or responsibility in the system without providing the code to make it happen.
+
+Robot robot = new Robot();
 
 Console.WriteLine("Enter 3 Commands: (on, off, north, south, east, west)");
 for (int i = 0; i < robot.Commands.Length; i++)

@@ -34,6 +34,8 @@ while (true)
         break;
     };
 
+    Console.WriteLine("Pack Contains:");
+
     foreach (InventoryItem item in mediumPack.Items)
     {
         Console.WriteLine(item);
@@ -95,7 +97,8 @@ public class Pack
     }
 }
 
-public class InventoryItem {
+public class InventoryItem 
+{
     public float Weight { get; }
     public float Volume { get; }
 
